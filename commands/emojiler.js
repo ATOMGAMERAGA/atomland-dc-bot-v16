@@ -2,7 +2,7 @@ const { Client, EmbedBuilder } = require("discord.js");
 
 module.exports = {
   name: "emojiler",
-  description: "💙 Sunucudaki Emojileri Görürsün!!",
+  description: " Sunucudaki Emojileri Görürsün!!",
   type: 1,
   options: [],
 
