@@ -9,7 +9,7 @@ module.exports = {
   run: async(client, interaction) => {
 
     const dvt = new Discord.ButtonBuilder().setLabel('Davet Linkim').setStyle('Link').setEmoji('1063843026482503739').setURL('https://discord.com/oauth2/authorize?client_id=1285893895804293226&scope=bot&permissions=27649375294');
-	const destek = new Discord.ButtonBuilder().setLabel('Destek Sunucum').setStyle('Link').setEmoji('1044325557615202364').setURL('https://dc.atomland.xyz');
+	const destek = new Discord.ButtonBuilder().setLabel('Destek Sunucum').setStyle('Link').setEmoji('1284008922532806706').setURL('https://dc.atomland.xyz');
     const row = new Discord.ActionRowBuilder().addComponents(dvt).addComponents(destek)
     const embed = new EmbedBuilder()
     .setAuthor({ name: "Merhaba, Ben ATOMLAND!", iconURL: interaction.client.user.displayAvatarURL({ dynamic: true })})
