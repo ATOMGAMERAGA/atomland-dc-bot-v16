@@ -3,7 +3,7 @@ const db = require("croxydb")
 const Discord = require("discord.js")
 module.exports = {
     name: "destek-sistemi",
-    description: "💙 Destek sistemini ayarlarsın!",
+    description: " Destek sistemini ayarlarsın!",
     type: 1,
     options: [
         {
@@ -33,7 +33,7 @@ module.exports = {
         const { user, customId, guild } = interaction;
         const yetki = new Discord.EmbedBuilder()
             .setColor("Red")
-            .setDescription("<:carpi:1040649840394260510> | Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın!")
+            .setDescription("<a:arp:1318968419940569159> | Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın!")
 
         const ticketkanal = interaction.options.getChannel('kanal')
         const logkanal = interaction.options.getChannel('log-kanalı')
@@ -46,13 +46,13 @@ module.exports = {
         
         if (ticketSystem && ticketSystemDate) {
             const date = new EmbedBuilder()
-            .setDescription(`<:carpi:1040649840394260510> | Bu sistem <t:${parseInt(ticketSystemDate.date / 1000)}:R> önce açılmış!`)
+            .setDescription(`<a:arp:1318968419940569159> | Bu sistem <t:${parseInt(ticketSystemDate.date / 1000)}:R> önce açılmış!`)
         
         return interaction.reply({ embeds: [date] })
         }
 
         const category = await guild.channels.create({
-            name: 'Silex Ticket',
+            name: 'ATOMLAND Ticket',
             type: Discord.ChannelType.GuildCategory,
             permissionOverwrites: [
               {
@@ -64,7 +64,7 @@ module.exports = {
 
         const basarili = new EmbedBuilder()
             .setColor("Green")
-            .setDescription(`<:tik:1039607067729727519> | __**Destek Sistemi**__ başarıyla ayarlandı!\n\n<:kanal:1040649841996464139> Destek Kanalı: ${ticketkanal}\n<:kanal:1040649841996464139> Log Kanalı: ${logkanal}\n<:bot:1039607042291269703> Yetkili Rolü: ${rol}`)
+            .setDescription(`<:tik:1039607067729727519> | __**Destek Sistemi**__ başarıyla ayarlandı!\n\n<a:ZippyRiri_Utility:1284009110320320555> Destek Kanalı: ${ticketkanal}\n<a:ZippyRiri_Utility:1284009110320320555> Log Kanalı: ${logkanal}\n<:Discord_Pixel_Emoji:1288881557087453194> Yetkili Rolü: ${rol}`)
             db.set(`ticketKanal_${interaction.guild.id}`, logkanal.id)
             db.set(`ticketSystem_${interaction.guild.id}`, { yetkili: rol.id, ticketchannel: ticketkanal.id })
             db.set(`ticketCategory_${interaction.guild.id}`, { category:  category.id, log: logkanal.id });
@@ -72,7 +72,7 @@ module.exports = {
 
             const menu = new Discord.EmbedBuilder()
             .setColor("000000")
-            .setTitle("<:soru:1039607065045385256> | Destek talebi nasıl açabilirim?")
+            .setTitle("<a:AUtilityPoint:1284009114699038833> | Destek talebi nasıl açabilirim?")
             .setDescription("> Aşağıdaki **Destek Talebi Oluştur** butonuna basarak destek talebi oluşturabilirsin!")
 			.setThumbnail(interaction.guild.iconURL({ dynamic: true }))
             .setFooter({ text: "Silex" })
