@@ -3,7 +3,7 @@ const db = require("croxydb")
 const Discord = require("discord.js")
 module.exports = {
     name: "destek-sistemi-sıfırla",
-    description: "💙 Destek sistemini sıfırlarsın!",
+    description: " Destek sistemini sıfırlarsın!",
     type: 1,
     options: [],
     // 
@@ -12,13 +12,13 @@ module.exports = {
         const { user, customId, guild } = interaction;
         const yetki = new Discord.EmbedBuilder()
             .setColor("Red")
-            .setDescription("<:carpi:1040649840394260510> | Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın!")
+            .setDescription("<a:arp:1318968419940569159> | Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın!")
 
         if (!interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) return interaction.reply({ embeds: [yetki], ephemeral: true })
 
         const basarili = new EmbedBuilder()
             .setColor("Green")
-            .setDescription(`<:tik:1039607067729727519> | __**Destek Sistemi**__ başarıyla sıfırlandı!`)
+            .setDescription(`<a:tik:1318968486671945840> | __**Destek Sistemi**__ başarıyla sıfırlandı!`)
             db.delete(`ticketKanal_${interaction.guild.id}`)
             db.delete(`ticketSystem_${interaction.guild.id}`)
             db.delete(`ticketLvl_${interaction.guild.id}`)
