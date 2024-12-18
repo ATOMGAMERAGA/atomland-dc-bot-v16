@@ -26,6 +26,6 @@
     "rhino-ms": "^0.4.0"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   }
 }
