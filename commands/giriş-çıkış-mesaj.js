@@ -3,12 +3,12 @@ const Discord = require('discord.js')
 const db = require("croxydb")
 module.exports = {
     name:"giriş-çıkış-mesaj",
-    description: '💙 Giriş Çıkış Mesajını Ayarlarsın!',
+    description: ' Giriş Çıkış Mesajını Ayarlarsın!',
     type:1,
     options: [],
   run: async(client, interaction) => {
 
-    if(!interaction.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) return interaction.reply({content: "<:carpi:1040649840394260510> | Kanalları Yönet Yetkin Yok!", ephemeral: true})
+    if(!interaction.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) return interaction.reply({content: "<a:arp:1318968419940569159> | Kanalları Yönet Yetkin Yok!", ephemeral: true})
     const row1 = new Discord.ActionRowBuilder()
 
     .addComponents(
@@ -24,7 +24,7 @@ module.exports = {
             .setCustomId("giriscikismesajsifirla_"+interaction.user.id)
     )
     const embed = new EmbedBuilder()
-    .setAuthor({ name: "Silex", iconURL: client.user.displayAvatarURL({ dynamic: true })})
+    .setAuthor({ name: "ATOMLAND", iconURL: client.user.displayAvatarURL({ dynamic: true })})
     .setDescription(`Merhaba <@${interaction.user.id}>! Giriş çıkış mesajını ayarlamak veya sıfırlamak için aşağıdaki butonları kullanabilirsin!`)
     .addFields([
         {
