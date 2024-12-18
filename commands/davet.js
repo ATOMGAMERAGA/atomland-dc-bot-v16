@@ -2,7 +2,7 @@ const { Client, EmbedBuilder, ButtonBuilder, ActionRow } = require("discord.js")
 const Discord = require("discord.js")
 module.exports = {
   name: "davet",
-  description: "💙 Botun davet linkini atar.",
+  description: " Botun davet linkini atar.",
   type: 1,
   options: [],
 
@@ -14,7 +14,7 @@ module.exports = {
     const embed = new EmbedBuilder()
     .setAuthor({ name: "Merhaba, Ben Silex!", iconURL: interaction.client.user.displayAvatarURL({ dynamic: true })})
 .setTitle("Silex'i Davet Et!")
-.setDescription(`<:bot:1039607042291269703> | Silex'i şimdi sunucuna davet et ve botun tadını çıkar!`)
+.setDescription(`<:bot:1039607042291269703> | ATOMLAND'ı şimdi sunucuna davet et ve botun tadını çıkar!`)
 .setColor('#2F3136')
 .setTimestamp()
 .setFooter({text: interaction.user.tag+" İstedi.", iconURL: interaction.user.displayAvatarURL({ dynamic: true })})
