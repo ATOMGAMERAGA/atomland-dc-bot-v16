@@ -3,7 +3,7 @@ const db = require("croxydb")
 const Discord = require("discord.js")
 module.exports = {
     name: "kayıt-sistemi",
-    description: "💙 Kayıt sistemini ayarlarsın!",
+    description: " Kayıt sistemini ayarlarsın!",
     type: 1,
     options: [
         {
@@ -32,7 +32,7 @@ module.exports = {
         const { user, customId, guild } = interaction;
         const yetki = new Discord.EmbedBuilder()
             .setColor("Red")
-            .setDescription("<:carpi:1040649840394260510> | Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın!")
+            .setDescription("<a:arp:1318968419940569159> | Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın!")
 
         const kayıtkanal = interaction.options.getChannel('kayıt-kanalı')
         const kayıtlırol = interaction.options.getRole('kayıtlı-rol')
@@ -45,14 +45,14 @@ module.exports = {
         
         if (kayitSistemi && kayıtSistemiDate) {
             const date = new EmbedBuilder()
-            .setDescription(`<:carpi:1040649840394260510> | Bu sistem <t:${parseInt(kayıtSistemiDate.date / 1000)}:R> önce açılmış!`)
+            .setDescription(`<a:arp:1318968419940569159> | Bu sistem <t:${parseInt(kayıtSistemiDate.date / 1000)}:R> önce açılmış!`)
         
         return interaction.reply({ embeds: [date] })
         }
 
         const basarili = new EmbedBuilder()
             .setColor("Green")
-            .setDescription(`<:tik:1039607067729727519> | __**Kayıt Sistemi**__ başarıyla ayarlandı!\n\n<:kanal:1040649841996464139> Kayıt Kanalı: ${kayıtkanal}\n<:bot:1039607042291269703> Kayıtlı Rolü: ${kayıtlırol}\n<:bot:1039607042291269703> Kayıtsız Rolü: ${kayıtsızrol}`)
+            .setDescription(`<a:tik:1318968486671945840> | __**Kayıt Sistemi**__ başarıyla ayarlandı!\n\n<:kanal:1040649841996464139> Kayıt Kanalı: ${kayıtkanal}\n<:bot:1039607042291269703> Kayıtlı Rolü: ${kayıtlırol}\n<:bot:1039607042291269703> Kayıtsız Rolü: ${kayıtsızrol}`)
             db.set(`kayıtsistemi_${interaction.guild.id}`, { kayıtkanal: kayıtkanal.id, kayıtlırol: kayıtlırol.id, kayıtsızrol: kayıtsızrol.id })
 			db.set(`kayıtsistemiDate_${interaction.guild.id}`, { date: Date.now() } )
 
