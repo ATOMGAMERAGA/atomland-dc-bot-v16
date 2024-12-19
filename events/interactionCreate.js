@@ -99,7 +99,7 @@ name: Discord.Events.InteractionCreate,
     if(interaction.customId === idFind("kayitol")) {
       const kayitmodel = new ModalBuilder()
       .setCustomId('kayitform')  
-      .setTitle('Silex - Kayıt Menüsü!')
+      .setTitle('ATOMLAND - Kayıt Menüsü!')
         const isim = new TextInputBuilder()
         .setCustomId('kayitisim')
         .setLabel('isim')
@@ -485,24 +485,24 @@ if(interaction.customId === 'giriscikis'){
           const embed = new EmbedBuilder()
           .setTitle("> <:mod:1039607060775571476> | ATOMLAND - Moderasyon Menüsü!")
           .addFields(
-        { name: "**> <:slash:1041998751419605004> </ban-list:1039964202003079243>**", value: `> <:sparklescyan:1285169162985148493> **Banlı kullanıcıları gösterir!**`, inline: true },
-        { name: "**> <:slash:1041998751419605004> </ban:1039964202003079244>**", value: `> <:soru:1039607065045385256> **Bir üyeyi yasaklarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </emojiler:1039964202003079250>**", value: `> <:soru:1039607065045385256> **Emojileri gösterir!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </forceban:1039964202045030420>**", value: `> <:soru:1039607065045385256> **ID ile kullanıcı banlarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </giriş-çıkış:1039964202045030424> | </giriş-çıkış-kapat:1039964202045030423>**", value: `> <:soru:1039607065045385256> **Giriş çıkış kanalını ayarlarsın!**`, inline: true  },
-		{ name: "**> <:slash:1041998751419605004> </giriş-çıkış-mesaj:1067118408816132207>**", value: `> <:soru:1039607065045385256> **Giriş çıkış mesajını ayarlarsınız!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </kanal-açıklama:1039964202045030426>**", value: `> <:soru:1039607065045385256> **Kanal açıklamasını değiştirirsin!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </kick:1039964202095349880>**", value: `> <:soru:1039607065045385256> **Bir üyeyi atarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </küfür-engel:1039964202095349883>**", value: `> <:soru:1039607065045385256> **Küfür engel sistemini açıp kapatırsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </oto-rol:1039964202095349887> | </oto-rol-kapat:1039964202095349886>**", value: `> <:soru:1039607065045385256> **OtoRol'ü ayarlarsın!!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </oto-tag:1039964202095349889> | </oto-tag-kapat:1039964202095349888>**", value: `> <:soru:1039607065045385256> **OtoTag'ı ayarlarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </oylama:1039964202149879908>**", value: `> <:soru:1039607065045385256> **Oylama başlatırsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </reklam-engel:1039964202149879911>**", value: `> <:soru:1039607065045385256> **Reklam engellemeyi açarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </rol-al:1039964202149879912>**", value: `> <:soru:1039607065045385256> **Rol alırsın!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </timeout-sistemi:1048961342540877907>**", value: `> <:soru:1039607065045385256> **Timeout sistemini ayarlarsın!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </timeout-sistemi-sıfırla:1048961342540877906>**", value: `> <:soru:1039607065045385256> **Timeout sistemini sıfırlarsın!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </timeout:1048961342540877908>**", value: `> <:soru:1039607065045385256> **Belirlenen kullanıcıya timeout atar.**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </untimeout:1048961342540877909>**", value: `> <:soru:1039607065045385256> **Belirlenen kullanıcının timeoutunu kaldırır.**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </ban-list:1039964202003079243>**", value: `> <:sparklescyan:1285169162985148493> **Banlı kullanıcıları gösterir!**`, inline: true },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </ban:1039964202003079244>**", value: `> <:sparklescyan:1285169162985148493> **Bir üyeyi yasaklarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </emojiler:1039964202003079250>**", value: `> <:sparklescyan:1285169162985148493> **Emojileri gösterir!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </forceban:1039964202045030420>**", value: `> <:sparklescyan:1285169162985148493> **ID ile kullanıcı banlarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </giriş-çıkış:1039964202045030424> | </giriş-çıkış-kapat:1039964202045030423>**", value: `> <:sparklescyan:1285169162985148493> **Giriş çıkış kanalını ayarlarsın!**`, inline: true  },
+		{ name: "**> <a:UtilityDeveloper:1284009078829355050> </giriş-çıkış-mesaj:1067118408816132207>**", value: `> <:sparklescyan:1285169162985148493> **Giriş çıkış mesajını ayarlarsınız!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </kanal-açıklama:1039964202045030426>**", value: `> <:sparklescyan:1285169162985148493> **Kanal açıklamasını değiştirirsin!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </kick:1039964202095349880>**", value: `> <:sparklescyan:1285169162985148493> **Bir üyeyi atarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </küfür-engel:1039964202095349883>**", value: `> <:sparklescyan:1285169162985148493> **Küfür engel sistemini açıp kapatırsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </oto-rol:1039964202095349887> | </oto-rol-kapat:1039964202095349886>**", value: `> <:sparklescyan:1285169162985148493> **OtoRol'ü ayarlarsın!!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </oto-tag:1039964202095349889> | </oto-tag-kapat:1039964202095349888>**", value: `> <:sparklescyan:1285169162985148493> **OtoTag'ı ayarlarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </oylama:1039964202149879908>**", value: `> <:sparklescyan:1285169162985148493> **Oylama başlatırsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </reklam-engel:1039964202149879911>**", value: `> <:sparklescyan:1285169162985148493> **Reklam engellemeyi açarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </rol-al:1039964202149879912>**", value: `> <:sparklescyan:1285169162985148493> **Rol alırsın!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </timeout-sistemi:1048961342540877907>**", value: `> <:sparklescyan:1285169162985148493> **Timeout sistemini ayarlarsın!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </timeout-sistemi-sıfırla:1048961342540877906>**", value: `> <:sparklescyan:1285169162985148493> **Timeout sistemini sıfırlarsın!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </timeout:1048961342540877908>**", value: `> <:sparklescyan:1285169162985148493> **Belirlenen kullanıcıya timeout atar.**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </untimeout:1048961342540877909>**", value: `> <:sparklescyan:1285169162985148493> **Belirlenen kullanıcının timeoutunu kaldırır.**`, inline: true  },
                   )
           .setColor("Random")
             interaction.update({embeds: [embed], components: [kayıt, row2]})
@@ -563,23 +563,23 @@ if(interaction.customId === 'giriscikis'){
         .setCustomId(".clearMessageButton_"+interaction.user.id)
       )
       const embed = new Discord.EmbedBuilder()
-      .setTitle("> <:mod:1039607060775571476> | Silex - Moderasyon 2 Menüsü!")
+      .setTitle("> <:mod:1039607060775571476> | ATOMLAND - Moderasyon 2 Menüsü!")
       .addFields(
-        { name: "**> <:slash:1041998751419605004> </rol-oluştur:1039964202149879913>**", value: `> <:soru:1039607065045385256> **Rol oluşturursun!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </rol-ver:1039964202149879914>**", value: `> <:soru:1039607065045385256> **Rol verirsin!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </sa-as:1039964202149879915>**", value: `> <:soru:1039607065045385256> **Selam sistemini ayarlarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </sil:1039964202149879917>**", value: `> <:soru:1039607065045385256> **Mesaj silersin!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </unban:1039964202359603301>**", value: `> <:soru:1039607065045385256> **Bir üyenin yasağını kaldırırsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </buton-rol:1039964202003079246>**", value: `> <:soru:1039607065045385256> **Buton rol sistemini ayarlarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </capslock-koruma:1039964202003079247>**", value: `> <:soru:1039607065045385256> **CapsLock koruma sistemini ayarlarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </görsel-engel:1039964202045030422> | </görsel-engel-kapat:1039964202045030421>**", value: `> <:soru:1039607065045385256> **Görsel engelleme sistemini ayarlarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </yavaş-mod:1039964202359603303>**", value: `> <:soru:1039607065045385256> **Yavaş modu ayarlarsın!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </sunucu-kur:1042791957463846972>**", value: `> <:soru:1039607065045385256> **Otomatik sunucu kurar!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </mod-log ayarla:1043079840695324722>**", value: `> <:soru:1039607065045385256> **Moderasyon Logunu ayarlarsın!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </yasaklı-kelime:1046365423945400420> | </yasaklı-kelime-kapat:1046366035315531796>**", value: `> <:soru:1039607065045385256> **Yasaklı Kelimeyi ayarlarsın!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </kanal-aç:1046452705482248272>**", value: `> <:soru:1039607065045385256> **Kanalı mesaj gönderimine açarsın!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </kanal-kilitle:1046452705482248273>**", value: `> <:soru:1039607065045385256> **Kanalı mesaj gönderimine kapatırsın!**`, inline: true  },
-	  { name: "**> <:slash:1041998751419605004> </resimli-giriş-çıkış:1068595212705878137>**", value: `> <:soru:1039607065045385256> **Resimli giriş çıkış'ı ayarlarsın!**`, inline: true  }
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </rol-oluştur:1039964202149879913>**", value: `> <:sparklescyan:1285169162985148493> **Rol oluşturursun!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </rol-ver:1039964202149879914>**", value: `> <:sparklescyan:1285169162985148493> **Rol verirsin!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </sa-as:1039964202149879915>**", value: `> <:sparklescyan:1285169162985148493> **Selam sistemini ayarlarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </sil:1039964202149879917>**", value: `> <:sparklescyan:1285169162985148493> **Mesaj silersin!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </unban:1039964202359603301>**", value: `> <:sparklescyan:1285169162985148493> **Bir üyenin yasağını kaldırırsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </buton-rol:1039964202003079246>**", value: `> <:sparklescyan:1285169162985148493> **Buton rol sistemini ayarlarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </capslock-koruma:1039964202003079247>**", value: `> <:sparklescyan:1285169162985148493> **CapsLock koruma sistemini ayarlarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </görsel-engel:1039964202045030422> | </görsel-engel-kapat:1039964202045030421>**", value: `> <:sparklescyan:1285169162985148493> **Görsel engelleme sistemini ayarlarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </yavaş-mod:1039964202359603303>**", value: `> <:sparklescyan:1285169162985148493> **Yavaş modu ayarlarsın!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </sunucu-kur:1042791957463846972>**", value: `> <:sparklescyan:1285169162985148493> **Otomatik sunucu kurar!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </mod-log ayarla:1043079840695324722>**", value: `> <:sparklescyan:1285169162985148493> **Moderasyon Logunu ayarlarsın!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </yasaklı-kelime:1046365423945400420> | </yasaklı-kelime-kapat:1046366035315531796>**", value: `> <:sparklescyan:1285169162985148493> **Yasaklı Kelimeyi ayarlarsın!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </kanal-aç:1046452705482248272>**", value: `> <:sparklescyan:1285169162985148493> **Kanalı mesaj gönderimine açarsın!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </kanal-kilitle:1046452705482248273>**", value: `> <:sparklescyan:1285169162985148493> **Kanalı mesaj gönderimine kapatırsın!**`, inline: true  },
+	  { name: "**> <a:UtilityDeveloper:1284009078829355050> </resimli-giriş-çıkış:1068595212705878137>**", value: `> <:sparklescyan:1285169162985148493> **Resimli giriş çıkış'ı ayarlarsın!**`, inline: true  }
       )
       .setColor("Random")
             interaction.update({embeds: [embed], components: [kayıt23, row2]})
@@ -640,26 +640,26 @@ if(interaction.customId === 'giriscikis'){
         .setCustomId(".clearMessageButton_"+interaction.user.id)
       )
       const embed = new Discord.EmbedBuilder()
-      .setTitle("> <:mod:1039607060775571476> | Silex - Moderasyon Menüsü!")
+      .setTitle("> <:mod:1039607060775571476> | ATOMLAND - Moderasyon Menüsü!")
       .addFields(
-        { name: "**> <:slash:1041998751419605004> </ban-list:1039964202003079243>**", value: `> <:soru:1039607065045385256> **Banlı kullanıcıları gösterir!**`, inline: true },
-        { name: "**> <:slash:1041998751419605004> </ban:1039964202003079244>**", value: `> <:soru:1039607065045385256> **Bir üyeyi yasaklarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </emojiler:1039964202003079250>**", value: `> <:soru:1039607065045385256> **Emojileri gösterir!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </forceban:1039964202045030420>**", value: `> <:soru:1039607065045385256> **ID ile kullanıcı banlarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </giriş-çıkış:1039964202045030424> | </giriş-çıkış-kapat:1039964202045030423>**", value: `> <:soru:1039607065045385256> **Giriş çıkış kanalını ayarlarsın!**`, inline: true  },
-		{ name: "**> <:slash:1041998751419605004> </giriş-çıkış-mesaj:1067118408816132207>**", value: `> <:soru:1039607065045385256> **Giriş çıkış mesajını ayarlarsınız!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </kanal-açıklama:1039964202045030426>**", value: `> <:soru:1039607065045385256> **Kanal açıklamasını değiştirirsin!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </kick:1039964202095349880>**", value: `> <:soru:1039607065045385256> **Bir üyeyi atarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </küfür-engel:1039964202095349883>**", value: `> <:soru:1039607065045385256> **Küfür engel sistemini açıp kapatırsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </oto-rol:1039964202095349887> | </oto-rol-kapat:1039964202095349886>**", value: `> <:soru:1039607065045385256> **OtoRol'ü ayarlarsın!!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </oto-tag:1039964202095349889> | </oto-tag-kapat:1039964202095349888>**", value: `> <:soru:1039607065045385256> **OtoTag'ı ayarlarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </oylama:1039964202149879908>**", value: `> <:soru:1039607065045385256> **Oylama başlatırsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </reklam-engel:1039964202149879911>**", value: `> <:soru:1039607065045385256> **Reklam engellemeyi açarsın!**`, inline: true  },
-        { name: "**> <:slash:1041998751419605004> </rol-al:1039964202149879912>**", value: `> <:soru:1039607065045385256> **Rol alırsın!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </timeout-sistemi:1048961342540877907>**", value: `> <:soru:1039607065045385256> **Timeout sistemini ayarlarsın!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </timeout-sistemi-sıfırla:1048961342540877906>**", value: `> <:soru:1039607065045385256> **Timeout sistemini sıfırlarsın!**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </timeout:1048961342540877908>**", value: `> <:soru:1039607065045385256> **Belirlenen kullanıcıya timeout atar.**`, inline: true  },
-      { name: "**> <:slash:1041998751419605004> </untimeout:1048961342540877909>**", value: `> <:soru:1039607065045385256> **Belirlenen kullanıcının timeoutunu kaldırır.**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </ban-list:1039964202003079243>**", value: `> <:sparklescyan:1285169162985148493> **Banlı kullanıcıları gösterir!**`, inline: true },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </ban:1039964202003079244>**", value: `> <:sparklescyan:1285169162985148493> **Bir üyeyi yasaklarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </emojiler:1039964202003079250>**", value: `> <:sparklescyan:1285169162985148493> **Emojileri gösterir!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </forceban:1039964202045030420>**", value: `> <:sparklescyan:1285169162985148493> **ID ile kullanıcı banlarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </giriş-çıkış:1039964202045030424> | </giriş-çıkış-kapat:1039964202045030423>**", value: `> <:sparklescyan:1285169162985148493> **Giriş çıkış kanalını ayarlarsın!**`, inline: true  },
+		{ name: "**> <a:UtilityDeveloper:1284009078829355050> </giriş-çıkış-mesaj:1067118408816132207>**", value: `> <:sparklescyan:1285169162985148493> **Giriş çıkış mesajını ayarlarsınız!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </kanal-açıklama:1039964202045030426>**", value: `> <:sparklescyan:1285169162985148493> **Kanal açıklamasını değiştirirsin!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </kick:1039964202095349880>**", value: `> <:sparklescyan:1285169162985148493> **Bir üyeyi atarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </küfür-engel:1039964202095349883>**", value: `> <:sparklescyan:1285169162985148493> **Küfür engel sistemini açıp kapatırsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </oto-rol:1039964202095349887> | </oto-rol-kapat:1039964202095349886>**", value: `> <:sparklescyan:1285169162985148493> **OtoRol'ü ayarlarsın!!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </oto-tag:1039964202095349889> | </oto-tag-kapat:1039964202095349888>**", value: `> <:sparklescyan:1285169162985148493> **OtoTag'ı ayarlarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </oylama:1039964202149879908>**", value: `> <:sparklescyan:1285169162985148493> **Oylama başlatırsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </reklam-engel:1039964202149879911>**", value: `> <:sparklescyan:1285169162985148493> **Reklam engellemeyi açarsın!**`, inline: true  },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </rol-al:1039964202149879912>**", value: `> <:sparklescyan:1285169162985148493> **Rol alırsın!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </timeout-sistemi:1048961342540877907>**", value: `> <:sparklescyan:1285169162985148493> **Timeout sistemini ayarlarsın!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </timeout-sistemi-sıfırla:1048961342540877906>**", value: `> <:sparklescyan:1285169162985148493> **Timeout sistemini sıfırlarsın!**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </timeout:1048961342540877908>**", value: `> <:sparklescyan:1285169162985148493> **Belirlenen kullanıcıya timeout atar.**`, inline: true  },
+      { name: "**> <a:UtilityDeveloper:1284009078829355050> </untimeout:1048961342540877909>**", value: `> <:sparklescyan:1285169162985148493> **Belirlenen kullanıcının timeoutunu kaldırır.**`, inline: true  },
               )
       .setColor("Random")
             interaction.update({embeds: [embed], components: [kayıt23, row2]})
@@ -720,11 +720,11 @@ if(interaction.customId === 'giriscikis'){
             .setCustomId(".clearMessageButton_"+interaction.user.id)
           )
           const embed = new EmbedBuilder()
-          .setTitle("> <:ek:1039607052340834354> | Silex - Kayıt Menüsü!")
+          .setTitle("> <:ek:1039607052340834354> | ATOMLAND - Kayıt Menüsü!")
           .addFields(
-            { name: "**> <:slash:1041998751419605004> </kayıt-sistemi:1063887700786159709>**", value: `> <:soru:1039607065045385256> **Kayıt sistemini ayarlarsın!**`, inline: true },
-          { name: "**> <:slash:1041998751419605004> </kayıt-sistemi-kapat:1063887700786159708>**", value: `> <:soru:1039607065045385256> **Kayıt sistemini kapatırsın**`, inline: true },
-			  { name: "**> <:slash:1041998751419605004> </kayıt-isim-sıfırla:1063887700786159708>**", value: `> <:soru:1039607065045385256> **Kayıt sistemindeki ismini sıfırlarsın!**`, inline: true }
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </kayıt-sistemi:1063887700786159709>**", value: `> <:sparklescyan:1285169162985148493> **Kayıt sistemini ayarlarsın!**`, inline: true },
+          { name: "**> <a:UtilityDeveloper:1284009078829355050> </kayıt-sistemi-kapat:1063887700786159708>**", value: `> <:sparklescyan:1285169162985148493> **Kayıt sistemini kapatırsın**`, inline: true },
+			  { name: "**> <a:UtilityDeveloper:1284009078829355050> </kayıt-isim-sıfırla:1063887700786159708>**", value: `> <:sparklescyan:1285169162985148493> **Kayıt sistemindeki ismini sıfırlarsın!**`, inline: true }
                   )
           .setColor("Random")
             interaction.update({embeds: [embed], components: [kayıt23, row2]})
@@ -783,22 +783,22 @@ if(interaction.customId === 'giriscikis'){
             .setCustomId(".clearMessageButton_"+interaction.user.id)
           )
           const embed = new EmbedBuilder()
-          .setTitle("> <:member:1039607059357913098> | Silex - Kullanıcı Menüsü!")
+          .setTitle("> <:member:1039607059357913098> | ATOMLAND - Kullanıcı Menüsü!")
           .addFields(
-            { name: "**> <:slash:1041998751419605004> </avatar:1039964202003079242>**", value: `> <:soru:1039607065045385256> **Avatarına bakarsın!**`, inline: true },
-            { name: "**> <:slash:1041998751419605004> </afk:1039964202003079241>**", value: `> <:soru:1039607065045385256> **Afk olursun!**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </emoji-yazı:1039964202003079249>**", value: `> <:soru:1039607065045385256> **Bota emoji ile yazı!**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </istatistik:1039964202045030425>**", value: `> <:soru:1039607065045385256> **Bot istatistikleri!**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </kurucu-kim:1039964202095349882>**", value: `> <:soru:1039607065045385256> **Sunucunun kurucusunu gösterir!**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </ping:1039964202149879909>**", value: `> <:soru:1039607065045385256> **Botun pingini gösterir!**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </yardım:1039964202359603302>**", value: `> <:soru:1039607065045385256> **Yardım menüsü!**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </davet:1039964202003079248>**", value: `> <:soru:1039607065045385256> **Botun davet linki!**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </kullanıcı-bilgi:1039964202095349881>**", value: `> <:soru:1039607065045385256> **Kullanıcı bilgisi!**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </random-anime:1039964202149879910>**", value: `> <:soru:1039607065045385256> **Random Anime atar.**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </say:1039964202149879916>**", value: `> <:soru:1039607065045385256> **Sunucuda kaç üye olduğunu gösterir.**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </sunucupp:1069330554278912091>**", value: `> <:soru:1039607065045385256> **Sunucunun avatarına bakarsın!**`, inline: true  },
-            { name: "**> <:slash:1041998751419605004> </sunucu-bilgi:1051458065578348546>**", value: `> <:soru:1039607065045385256> **Sunucu bilgilerini gösterir.**`, inline: true  },
-          { name: "**> <:slash:1041998751419605004> </ayarlar:1053000987285127249>**", value: `> <:soru:1039607065045385256> **Sunucu ayarlarını gösterir.**`, inline: true  }
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </avatar:1039964202003079242>**", value: `> <:sparklescyan:1285169162985148493> **Avatarına bakarsın!**`, inline: true },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </afk:1039964202003079241>**", value: `> <:sparklescyan:1285169162985148493> **Afk olursun!**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </emoji-yazı:1039964202003079249>**", value: `> <:sparklescyan:1285169162985148493> **Bota emoji ile yazı!**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </istatistik:1039964202045030425>**", value: `> <:sparklescyan:1285169162985148493> **Bot istatistikleri!**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </kurucu-kim:1039964202095349882>**", value: `> <:sparklescyan:1285169162985148493> **Sunucunun kurucusunu gösterir!**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </ping:1039964202149879909>**", value: `> <:sparklescyan:1285169162985148493> **Botun pingini gösterir!**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </yardım:1039964202359603302>**", value: `> <:sparklescyan:1285169162985148493> **Yardım menüsü!**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </davet:1039964202003079248>**", value: `> <:sparklescyan:1285169162985148493> **Botun davet linki!**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </kullanıcı-bilgi:1039964202095349881>**", value: `> <:sparklescyan:1285169162985148493> **Kullanıcı bilgisi!**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </random-anime:1039964202149879910>**", value: `> <:sparklescyan:1285169162985148493> **Random Anime atar.**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </say:1039964202149879916>**", value: `> <:sparklescyan:1285169162985148493> **Sunucuda kaç üye olduğunu gösterir.**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </sunucupp:1069330554278912091>**", value: `> <:sparklescyan:1285169162985148493> **Sunucunun avatarına bakarsın!**`, inline: true  },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </sunucu-bilgi:1051458065578348546>**", value: `> <:sparklescyan:1285169162985148493> **Sunucu bilgilerini gösterir.**`, inline: true  },
+          { name: "**> <a:UtilityDeveloper:1284009078829355050> </ayarlar:1053000987285127249>**", value: `> <:sparklescyan:1285169162985148493> **Sunucu ayarlarını gösterir.**`, inline: true  }
                   )
           .setColor("Random")
             interaction.update({embeds: [embed], components: [kayıt23, row2]})
@@ -858,9 +858,9 @@ if(interaction.customId === 'giriscikis'){
         .setCustomId(".clearMessageButton_"+interaction.user.id)
       )
           const embed = new EmbedBuilder()
-          .setAuthor({ name: "Silex Sistemler Menüsü", iconURL: client.user.displayAvatarURL({ dynamic: true })})
+          .setAuthor({ name: "ATOMLAND Sistemler Menüsü", iconURL: client.user.displayAvatarURL({ dynamic: true })})
           .setTitle("・Hangi komutlarım hakkında bilgi almak istiyorsan o butona bas!")
-          .setDescription("\n\n**<:links:1039607057923461181> Linkler**\n> <:bot:1039607042291269703>・**Botun davet linki: [Tıkla](https://discord.com/api/oauth2/authorize?client_id=1038372156578480199&permissions=8&scope=bot%20applications.commands)**\n> <:duyuru:1039607050734403657>・**Botun destek sunucusu: [Tıkla](https://discord.gg/SY7aMsVpUJ)**\n> <:newmember:1044325552007422052>・**Botun gizlilik politikası: [Tıkla](https://github.com/araschain/Silex-Bot-Privacy-Policy)**")
+          .setDescription("\n\n**🔗 Linkler**\n> <:Bot:1319328570845429861>・**Botun davet linki: [Tıkla](https://discord.com/channels/1281672893696311387/1281676496959701135/1319329207310090353)**\n> <a:redutility4:1284009023515136002>・**Botun destek sunucusu: [Tıkla](https://dc.atomland.xyz)**\n> <:new_member:1319328788202520608>・**Botun gizlilik politikası: [Tıkla](https://github.com/ATOMGAMERAGA/atomland-privacy-policy/)**")
           .setColor('Blue')
           interaction.update({embeds: [embed], components: [row, row2]})
       
@@ -869,10 +869,10 @@ if(interaction.customId === 'giriscikis'){
               if (!interaction.isButton()) return;
         if (interaction.customId == "korumasystem_"+interaction.user.id) {
           const embed = new Discord.EmbedBuilder()
-          .setTitle("> <:koruma:1044325545925672976> | Silex - Koruma Menüsü!")
+          .setTitle("> <:koruma:1044325545925672976> | ATOMLAND - Koruma Menüsü!")
           .addFields(
-            { name: "**> <:slash:1041998751419605004> </hesap-koruma:1069205098888171560>**", value: `> <:soru:1039607065045385256> **Hesap koruma sistemini açarsın!**`, inline: true },
-            { name: "**> <:slash:1041998751419605004> </koruma-log:1069205098888171561>**", value: `> <:soru:1039607065045385256> **Koruma logunu ayarlarsın!**`, inline: true }
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </hesap-koruma:1069205098888171560>**", value: `> <:sparklescyan:1285169162985148493> **Hesap koruma sistemini açarsın!**`, inline: true },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </koruma-log:1069205098888171561>**", value: `> <:sparklescyan:1285169162985148493> **Koruma logunu ayarlarsın!**`, inline: true }
           )
           .setColor("Random")
                 
@@ -984,9 +984,9 @@ if(interaction.customId === 'giriscikis'){
         .setCustomId(".clearMessageButton_"+interaction.user.id)
       )
           const embed = new EmbedBuilder()
-          .setTitle("> <:bot:1039607042291269703> | Silex - Botlist Menüsü!")
+          .setTitle("> <:Bot:1319328570845429861> | ATOMLAND - Botlist Menüsü!")
           .addFields(
-            { name: "**> <:slash:1041998751419605004> </botlist-ayarla:1039964202003079245>**", value: `> <:soru:1039607065045385256> **Botlist sistemini ayarlarsın!**`, inline: true }
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </botlist-ayarla:1039964202003079245>**", value: `> <:sparklescyan:1285169162985148493> **Botlist sistemini ayarlarsın!**`, inline: true }
           )
           .setColor("Random")
             interaction.update({embeds: [embed], components: [row, row2]})
@@ -1045,11 +1045,11 @@ if(interaction.customId === 'giriscikis'){
         .setCustomId(".clearMessageButton_"+interaction.user.id)
       )
       const embed = new Discord.EmbedBuilder()
-      .setTitle("> <:ses:1041739960493019197> | Silex - Özel Oda Menüsü!")
+      .setTitle("> 🔊 | ATOMLAND - Özel Oda Menüsü!")
       .addFields(
-        { name: "**> <:slash:1041998751419605004> </özel-oda-sistemi:1041738859572105318>**", value: `> <:soru:1039607065045385256> **Özel Oda Sistemini ayarlarsın!**`, inline: true },
-        { name: "**> <:slash:1041998751419605004> </özel-oda-sil:1041738859572105317>**", value: `> <:soru:1039607065045385256> **Özel Odanı silersin!**`, inline: true },
-        { name: "**> <:slash:1041998751419605004> </özel-oda-kullanıcı-menü:1041738859572105316>**", value: `> <:soru:1039607065045385256> **Özel Odana kullanıcı eklersin!**`, inline: true }
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </özel-oda-sistemi:1041738859572105318>**", value: `> <:sparklescyan:1285169162985148493> **Özel Oda Sistemini ayarlarsın!**`, inline: true },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </özel-oda-sil:1041738859572105317>**", value: `> <:sparklescyan:1285169162985148493> **Özel Odanı silersin!**`, inline: true },
+        { name: "**> <a:UtilityDeveloper:1284009078829355050> </özel-oda-kullanıcı-menü:1041738859572105316>**", value: `> <:sparklescyan:1285169162985148493> **Özel Odana kullanıcı eklersin!**`, inline: true }
       )
       .setColor("Random")
             interaction.update({embeds: [embed], components: [row, row2]})
@@ -1059,9 +1059,9 @@ if(interaction.customId === 'giriscikis'){
         if (!interaction.isButton()) return;
         if (interaction.customId == "anasayfa_"+interaction.user.id) {
           const embed = new EmbedBuilder()
-          .setAuthor({ name: "Silex Yardım Menüsü", iconURL: client.user.displayAvatarURL({ dynamic: true })})
+          .setAuthor({ name: "ATOMLAND Yardım Menüsü", iconURL: client.user.displayAvatarURL({ dynamic: true })})
           .setTitle("・Hangi komutlarım hakkında bilgi almak istiyorsan o butona bas!")
-          .setDescription("\n\n**<:links:1039607057923461181> Linkler**\n> <:bot:1039607042291269703>・**Botun davet linki: [Tıkla](https://discord.com/api/oauth2/authorize?client_id=1038372156578480199&permissions=8&scope=bot%20applications.commands)**\n> <:duyuru:1039607050734403657>・**Botun destek sunucusu: [Tıkla](https://discord.gg/SY7aMsVpUJ)**\n> <:newmember:1044325552007422052>・**Botun gizlilik politikası: [Tıkla](https://github.com/araschain/Silex-Bot-Privacy-Policy)**")
+          .setDescription("\n\n**🔗 Linkler**\n> <:Bot:1319328570845429861>・**Botun davet linki: [Tıkla](https://discord.com/channels/1281672893696311387/1281676496959701135/1319329207310090353)**\n> <a:redutility4:1284009023515136002>・**Botun destek sunucusu: [Tıkla](https://dc.atomland.xyz)**\n> <:new_member:1319328788202520608>・**Botun gizlilik politikası: [Tıkla](https://github.com/ATOMGAMERAGA/atomland-privacy-policy/)**")
           .setColor('Blue')
           const row = new Discord.ActionRowBuilder()
           .addComponents(
@@ -1171,10 +1171,10 @@ if(interaction.customId === 'giriscikis'){
         .setCustomId(".clearMessageButton_"+interaction.user.id)
       )
           const embed = new EmbedBuilder()
-          .setTitle("> <:yenilik:1044325577064190033> | Silex - Ticket Menüsü!")
+          .setTitle("> <:yenilik:1044325577064190033> | ATOMLAND - Ticket Menüsü!")
           .addFields(
-            { name: "**> <:slash:1041998751419605004> </destek-sistemi:1065718561311567995>**", value: `> <:soru:1039607065045385256> **Destek sistemini ayarlarsın!**`, inline: true },
-            { name: "**> <:slash:1041998751419605004> </destek-sistemi-sıfırla:1065718561311567994>**", value: `> <:soru:1039607065045385256> **Destek sistemini sıfırlarsın!.**`, inline: true  }
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </destek-sistemi:1065718561311567995>**", value: `> <:sparklescyan:1285169162985148493> **Destek sistemini ayarlarsın!**`, inline: true },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </destek-sistemi-sıfırla:1065718561311567994>**", value: `> <:sparklescyan:1285169162985148493> **Destek sistemini sıfırlarsın!.**`, inline: true  }
                   )
           .setColor("Random")
             interaction.update({embeds: [embed], components: [row, row2]})
@@ -1234,15 +1234,15 @@ if(interaction.customId === 'giriscikis'){
         .setCustomId(".clearMessageButton_"+interaction.user.id)
       )
           const embed = new EmbedBuilder()
-          .setTitle("> <:roket:1044325558563123312> | Silex - Level Menüsü!")
+          .setTitle("> <:NicePng_mariopixelpng_1691779:1284008084297224223> | ATOMLAND - Level Menüsü!")
           .addFields(
-            { name: "**> <:slash:1041998751419605004> </level-sistemi:1053000987285127254>**", value: `> <:soru:1039607065045385256> **Level sistemini açarsın!**`, inline: true },
-            { name: "**> <:slash:1041998751419605004> </level-log ayarla:1053000987285127252>**", value: `> <:soru:1039607065045385256> **Level logu ayarlarsın!**`, inline: true },
-            { name: "**> <:slash:1041998751419605004> </level:1053000987285127255>**", value: `> <:soru:1039607065045385256> **Levelini görüntülersin!**`, inline: true },
-            { name: "**> <:slash:1041998751419605004> </level-ekle:1053000987285127251>**", value: `> <:soru:1039607065045385256> **Level eklersin!**`, inline: true },
-            { name: "**> <:slash:1041998751419605004> </level-kaldır:1053000987285127253>**", value: `> <:soru:1039607065045385256> **Level kaldırırsın!**`, inline: true },
-            { name: "**> <:slash:1041998751419605004> </level-arka-plan:1053750137077387334>**", value: `> <:soru:1039607065045385256> **Level arkaplanını ayarlarsın!**`, inline: true },
-            { name: "**> <:slash:1041998751419605004> </level-sıralaması:1053000987285127250>**", value: `> <:soru:1039607065045385256> **Level sıralamasını görüntülersin!**`, inline: true }
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </level-sistemi:1053000987285127254>**", value: `> <:sparklescyan:1285169162985148493> **Level sistemini açarsın!**`, inline: true },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </level-log ayarla:1053000987285127252>**", value: `> <:sparklescyan:1285169162985148493> **Level logu ayarlarsın!**`, inline: true },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </level:1053000987285127255>**", value: `> <:sparklescyan:1285169162985148493> **Levelini görüntülersin!**`, inline: true },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </level-ekle:1053000987285127251>**", value: `> <:sparklescyan:1285169162985148493> **Level eklersin!**`, inline: true },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </level-kaldır:1053000987285127253>**", value: `> <:sparklescyan:1285169162985148493> **Level kaldırırsın!**`, inline: true },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </level-arka-plan:1053750137077387334>**", value: `> <:sparklescyan:1285169162985148493> **Level arkaplanını ayarlarsın!**`, inline: true },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </level-sıralaması:1053000987285127250>**", value: `> <:sparklescyan:1285169162985148493> **Level sıralamasını görüntülersin!**`, inline: true }
           )
           .setColor("Random")
             interaction.update({embeds: [embed], components: [row, row2]})
@@ -1302,11 +1302,11 @@ if(interaction.customId === 'giriscikis'){
         .setCustomId(".clearMessageButton_"+interaction.user.id)
       )
           const embed = new EmbedBuilder()
-          .setTitle("> <:roket:1044325558563123312> | Silex - Captcha Menüsü!")
+          .setTitle("> <:NicePng_mariopixelpng_1691779:1284008084297224223> | ATOMLAND - Captcha Menüsü!")
           .addFields(
-            { name: "**> <:slash:1041998751419605004> </captcha-sistemi:1064125585166708918>**", value: `> <:soru:1039607065045385256> **Captcha sistemini açarsın!**`, inline: true },
-            { name: "**> <:slash:1041998751419605004> </captcha-görüntüle:1064125585166708917>**", value: `> <:soru:1039607065045385256> **Captcha istatistiklerini görüntülersin!**`, inline: true },
-			{ name: "**> <:slash:1041998751419605004> </captcha-sistemi-sıfırla:1068963862600220732>**", value: `> <:soru:1039607065045385256> **Captcha sistemini sıfırlarsın!**`, inline: true }
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </captcha-sistemi:1064125585166708918>**", value: `> <:sparklescyan:1285169162985148493> **Captcha sistemini açarsın!**`, inline: true },
+            { name: "**> <a:UtilityDeveloper:1284009078829355050> </captcha-görüntüle:1064125585166708917>**", value: `> <:sparklescyan:1285169162985148493> **Captcha istatistiklerini görüntülersin!**`, inline: true },
+			{ name: "**> <a:UtilityDeveloper:1284009078829355050> </captcha-sistemi-sıfırla:1068963862600220732>**", value: `> <:sparklescyan:1285169162985148493> **Captcha sistemini sıfırlarsın!**`, inline: true }
           )
           .setColor("Random")
             interaction.update({embeds: [embed], components: [row, row2]})
@@ -1398,14 +1398,14 @@ if(interaction.customId === 'giriscikis'){
             const dmb = deleteMessageButton(interaction, {
               label: "Mesajı sil.",
               style: Discord.ButtonStyle.Secondary,
-              emoji: "<:sil:1039607063443161158>"
+              emoji: "<:minecraftsilencearmourtrim:1299037815195177084>"
         });
             let muterol = db.fetch(`rol_${interaction.guild.id}`)
             let ucanEssek = interaction.guild.members.cache.get(kullanıcı)
-            if (!ucanEssek) return interaction.reply("<:carpi:1040649840394260510> | Üyeyi bulamadım.")
+            if (!ucanEssek) return interaction.reply("<a:arp:1318968419940569159> | Üyeyi bulamadım.")
             ucanEssek.roles.add(muterol)
             const embed = new EmbedBuilder()
-            .setDescription(`<:tik:1039607067729727519> | Başarılı bir şekilde <@!${kullanıcı}> isimli kişiye mute atıldı.
+            .setDescription(`<a:tik:1318968486671945840> | Başarılı bir şekilde <@!${kullanıcı}> isimli kişiye mute atıldı.
         `)
             interaction.update({embeds: [embed], components: [row, dmb]})
           }
@@ -1430,10 +1430,10 @@ if(interaction.customId === 'giriscikis'){
             const dmb = deleteMessageButton(interaction, {
               label: "Mesajı sil.",
               style: Discord.ButtonStyle.Secondary,
-              emoji: "<:sil:1039607063443161158>"
+              emoji: "<:minecraftsilencearmourtrim:1299037815195177084>"
         });
             const embed = new EmbedBuilder()
-            .setDescription(`<:tik:1039607067729727519> | Başarılı bir şekilde mute iptal edildi.
+            .setDescription(`<a:tik:1318968486671945840> | Başarılı bir şekilde mute iptal edildi.
         `)
             interaction.update({embeds: [embed], components: [row, dmb]})
           }
@@ -1492,7 +1492,7 @@ if(interaction.customId === 'giriscikis'){
             interaction.guild.channels.create({name: "▬▬ SOHBET KANALLARI ▬▬", type: ChannelType.GuildCategory}).then(katagori2 => {
             interaction.guild.channels.create({name: "💬・sohbet", type: ChannelType.GuildText}).then(sohbet => {
                 const embed2 = new EmbedBuilder()
-                .setTitle('Silex Bot - İyi günler diler.')
+                .setTitle('ATOMLAND Bot - İyi günler diler.')
                 .setDescription(`Unutma ${interaction.user}, senin için her şeyini ben ayarladım artık başka bir şey yapmana gerek yok.\n\nArtık sunucunu güvenli bir şekilde açabilirsin.`)
                 .setColor("Blue")
                 sohbet.send({embeds: [embed2]})
@@ -1541,7 +1541,7 @@ if(interaction.customId === 'giriscikis'){
             }
         
             if (interaction.customId === "sunucukurred_"+interaction.user.id) {
-              interaction.update({content: `<:tik:1039607067729727519> | Başarılı bir şekilde sunucu kurma iptal edildi!`, embeds: [], components: []})
+              interaction.update({content: `<a:tik:1318968486671945840> | Başarılı bir şekilde sunucu kurma iptal edildi!`, embeds: [], components: []})
             } 
             
             if (interaction.customId === "yenile_"+interaction.user.id) {
@@ -1576,18 +1576,18 @@ if(interaction.customId === 'giriscikis'){
           var yes45 = servers > 450
           var yes5 = servers > 500
           
-          var basDolu = "<:basdolubar:1095981131385544704>"
-          var basBos = "<:basbosbar:1095981689144090654>"
-          var ortaDolu = "<:ortadolubar:1095981133738561586>"
-          var ortaBos = "<:ortabosbar:1095981373422051348>"
-          var sonDolu = "<:sondolubar:1054411035374788708>"
-          var sonBos = "<:sonbosbar:1095981520998649867>"
+          var basDolu = "<:basdolu:1319151258694586502>"
+          var basBos = "<:basbos:1319151312457175101>"
+          var ortaDolu = "<:ortadolu:1319151089739894886>"
+          var ortaBos = "<:ortabos:1319151178898215027>"
+          var sonDolu = "<:sondolu:1319151368145076336>"
+          var sonBos = "<:sonbos:1319151426953416786>"
           
             let members = client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()
               const embed = new EmbedBuilder()
               .setThumbnail(interaction.client.user.displayAvatarURL({ dynamic: true }))
               .addFields(
-                { name: '<:dev:1039607045613166652> Bot Sahibi', value: `**aras#0001**`, inline: true },
+                { name: '<a:UtilityDeveloper:1284009078829355050> Bot Sahibi', value: `**atomgameraga**`, inline: true },
                 { name: "👥 Kullanıcılar", value: `${members}`, inline: true },
                 { name: "🧩 Sunucular", value: `${servers}`, inline: true },
                 { name: "📼 Bellek Kullanımı", value: `${(process.memoryUsage().heapUsed / 1024 / 512).toFixed(2)}MB`, inline: true },
@@ -1601,7 +1601,7 @@ if(interaction.customId === 'giriscikis'){
             if (interaction.customId === "botekle_everyone") {
 
               const zatenEklenmis = new EmbedBuilder()
-              .setTitle("<:carpi:1040649840394260510> | Başarısız!")
+              .setTitle("<a:arp:1318968419940569159> | Başarısız!")
               .setDescription("Zaten eklenmiş olan bir botun var!")
               .setColor("Red")
           let varmi = db.get(`ekledi_${interaction.user.id}${interaction.guild.id}`)
@@ -1657,9 +1657,9 @@ if(interaction.customId === 'giriscikis'){
                 .setColor("Yellow")
       
             const yetki = new Discord.EmbedBuilder()
-                .setTitle("<:carpi:1040649840394260510> | Yetersiz Yetki!")
+                .setTitle("<a:arp:1318968419940569159> | Yetersiz Yetki!")
                 .setDescription("> Bu komutu kullanabilmek için `Yönetici` yetkisine ihtiyacın var!")
-                .setFooter({ text: "Silex" })
+                .setFooter({ text: "ATOMLAND" })
                 .setColor("Red")
             if (!interaction.member.permissions.has(Discord.PermissionsBitField.Flags.ManageChannels)) return interaction.reply({ embeds: [yetki], ephemeral: true });
       
@@ -1669,13 +1669,13 @@ if(interaction.customId === 'giriscikis'){
 
         if (interaction.customId === "kapat_"+interaction.user.id) {
           const yetkii = new Discord.EmbedBuilder()
-              .setTitle("<:carpi:1040649840394260510> | Yetersiz Yetki!")
+              .setTitle("<a:arp:1318968419940569159> | Yetersiz Yetki!")
               .setDescription("> Bu komutu kullanabilmek için `Yönetici` yetkisine ihtiyacın var!")
-              .setFooter({ text: "Silex" })
+              .setFooter({ text: "ATOMLAND" })
               .setColor("Red")
     
           const embed1 = new Discord.EmbedBuilder()
-              .setTitle("<:tik:1039607067729727519> | Başarıyla Sıfırlandı!")
+              .setTitle("<a:tik:1318968486671945840> | Başarıyla Sıfırlandı!")
               .setDescription("> Botlist sistemi başarıyla **sıfırlandı**!")
               .setColor("Green")
     
@@ -1694,7 +1694,7 @@ if(interaction.customId === 'giriscikis'){
       
       const mod = new ModalBuilder()
       .setCustomId('eklemenu')
-      .setTitle('Silex - Özel Oda Kullanıcı Ekleme!')
+      .setTitle('ATOMLAND - Özel Oda Kullanıcı Ekleme!')
         const e = new TextInputBuilder()
         .setCustomId('uyeid')
         .setLabel('Kullanıcı ID')
@@ -1708,13 +1708,13 @@ if(interaction.customId === 'giriscikis'){
 
         if(interaction.customId === "ekle_"+interaction.user.id){
           let odasiz = db.fetch(`oda_${interaction.user.id}`)
-          if (!odasiz) return interaction.reply({content: "<:carpi:1040649840394260510> | Sana Ait Bir Oda Bulamadım!", ephemeral: true})
+          if (!odasiz) return interaction.reply({content: "<a:arp:1318968419940569159> | Sana Ait Bir Oda Bulamadım!", ephemeral: true})
           await interaction.showModal(mod);
         }
 
         const mod2 = new ModalBuilder()
         .setCustomId('eklemenu2')
-        .setTitle('Silex - Özel Oda Kullanıcı Çıkarma!')
+        .setTitle('ATOMLAND - Özel Oda Kullanıcı Çıkarma!')
           const a = new TextInputBuilder()
           .setCustomId('cikarid')
           .setLabel('Kullanıcı ID')
@@ -1728,13 +1728,13 @@ if(interaction.customId === 'giriscikis'){
 
           if(interaction.customId === "çıkar_"+interaction.user.id){
             let odasiz = db.fetch(`oda_${interaction.user.id}`)
-            if (!odasiz) return interaction.reply({content: "<:carpi:1040649840394260510> | Sana Ait Bir Oda Bulamadım!", ephemeral: true})
+            if (!odasiz) return interaction.reply({content: "<a:arp:1318968419940569159> | Sana Ait Bir Oda Bulamadım!", ephemeral: true})
             await interaction.showModal(mod2);
           }
 
           if (interaction.customId === "unban_everyone") {
             const botlistadmin = db.fetch(`adminRol_${interaction.guild.id}`)
-            if(!interaction.member.permissions.has(botlistadmin)) return interaction.reply({content: `<:carpi:1040649840394260510> | Bu butonu sadece <@&${botlistadmin}> yetkisi olanlar kullanabilir!`, ephemeral: true})
+            if(!interaction.member.permissions.has(botlistadmin)) return interaction.reply({content: `<a:arp:1318968419940569159> | Bu butonu sadece <@&${botlistadmin}> yetkisi olanlar kullanabilir!`, ephemeral: true})
             let message = await interaction.channel.messages.fetch(interaction.message.id)
             const user = db.fetch(`user_${interaction.message.id}`)
             var data = db.fetch(`ekledi_${user}`)
@@ -1742,13 +1742,13 @@ if(interaction.customId === 'giriscikis'){
             let lourityData = data
       
             const yetkiii = new Discord.EmbedBuilder()
-                .setTitle("<:carpi:1040649840394260510> | Yetersiz Yetki!")
+                .setTitle("<a:arp:1318968419940569159> | Yetersiz Yetki!")
                 .setDescription("> Bu komutu kullanabilmek için `Yönetici` yetkisine ihtiyacın var!")
-                .setFooter({ text: "Silex" })
+                .setFooter({ text: "ATOMLAND" })
                 .setColor("Red")
       
             const embed1 = new Discord.EmbedBuilder()
-                .setTitle("<:tik:1039607067729727519> | Başarılı!")
+                .setTitle("<a:tik:1318968486671945840> | Başarılı!")
                 .setDescription("> Botun banı başarıyla **kaldırıldı**!")
                 .setColor("Green")
       
@@ -1764,7 +1764,7 @@ if(interaction.customId === 'giriscikis'){
         if (interaction.customId === "reddet_everyone") {
 
           const botlistadmin = db.fetch(`adminRol_${interaction.guild.id}`)
-          if(!interaction.member.permissions.has(botlistadmin)) return interaction.reply({content: `<:carpi:1040649840394260510> | Bu butonu sadece <@&${botlistadmin}> yetkisi olanlar kullanabilir!`, ephemeral: true})
+          if(!interaction.member.permissions.has(botlistadmin)) return interaction.reply({content: `<a:arp:1318968419940569159> | Bu butonu sadece <@&${botlistadmin}> yetkisi olanlar kullanabilir!`, ephemeral: true})
       
             let message = await interaction.channel.messages.fetch(interaction.message.id)
             let log = db.get(`log_${interaction.guild.id}`)
@@ -1772,14 +1772,14 @@ if(interaction.customId === 'giriscikis'){
             var uye = data.user
             var bot = data.bot
 
-            if (!interaction.member.roles.cache.has(botlistadmin)) return interaction.reply({ content: "<:carpi:1040649840394260510> | Bu işlemi gerçekleştirmek için <@&" + botlistadmin + "> rolüne sahip olmalısın!", ephemeral: true })
+            if (!interaction.member.roles.cache.has(botlistadmin)) return interaction.reply({ content: "<a:arp:1318968419940569159> | Bu işlemi gerçekleştirmek için <@&" + botlistadmin + "> rolüne sahip olmalısın!", ephemeral: true })
       
             let a = await client.users.fetch(bot);
             let avatar = a.avatar
             let link = "https://cdn.discordapp.com/avatars/" + bot + "/" + avatar + ".png?size=1024"
       
             const embed = new EmbedBuilder()
-                .setTitle("<:carpi:1040649840394260510> | Bot Reddedildi!")
+                .setTitle("<a:arp:1318968419940569159> | Bot Reddedildi!")
                 .setDescription("<@" + data.bot + "> adlı botun başvurusu maalesef reddedildi!")
                 .setThumbnail(link)
                 .setColor("Red")
@@ -1790,10 +1790,10 @@ if(interaction.customId === 'giriscikis'){
 		
 		        if(interaction.customId === `ticketnasilacilir_everyone`) {
         const embed = new Discord.EmbedBuilder()
-        .setAuthor({ name: "Silex Destek Menüsü", iconURL: client.user.displayAvatarURL({ dynamic: true })})
+        .setAuthor({ name: "ATOMLAND Destek Menüsü", iconURL: client.user.displayAvatarURL({ dynamic: true })})
         .setTitle("・Destek talebi nasıl oluşturabilirsin.")
         .setDescription("**Destek Talebi Oluştur** butonuna tıkladıktan sonra karşına bir form gelecektir. O formu doldurduktan sonra destek talebin başarılı bir şekilde oluşturulacaktır.")
-        .setImage(`https://cdn.discordapp.com/attachments/1059089831604531243/1065995534730534972/image.png`)
+        .setImage(`https://r.resimlink.com/Kdyznms.png`)
         .setColor('Blue')
           interaction.reply({ embeds: [embed], ephemeral: true })
         }
@@ -1803,7 +1803,7 @@ if(interaction.customId === 'giriscikis'){
           const find = db.fetch(`ticketUser_${interaction.user.id}${interaction.guild.id}`)
           if(find) {
             const ticketVar = new Discord.EmbedBuilder()
-            .setDescription(`<:carpi:1040649840394260510> Zaten bir talebin bulunmakta.`)
+            .setDescription(`<a:arp:1318968419940569159> Zaten bir talebin bulunmakta.`)
             return interaction.reply({ embeds: [ticketVar], ephemeral: true })
           }
 
@@ -1842,7 +1842,7 @@ if(interaction.customId === 'giriscikis'){
               .setStyle(Discord.ButtonStyle.Secondary),
           );
           const ticketClose = new Discord.EmbedBuilder()
-          .setDescription(`<:tik:1039607067729727519> | Bu destek talebi kapatılmıştır.`)
+          .setDescription(`<a:tik:1318968486671945840> | Bu destek talebi kapatılmıştır.`)
           .setColor('Green')
           interaction.reply({ embeds: [ticketClose], components: [row] })
         }
@@ -1942,7 +1942,7 @@ if(interaction.customId === `benıdogrula_everyone_${interaction.guild.id}${inte
           
           if (!sayacmessage) {
               const date = new EmbedBuilder()
-              .setDescription(`<:carpi:1040649840394260510> | Bu sistem zaten kapalı!`)
+              .setDescription(`<a:arp:1318968419940569159> | Bu sistem zaten kapalı!`)
           
           return interaction.reply({ embeds: [date], ephemeral: true })
           }
@@ -1965,7 +1965,7 @@ if(interaction.customId === `benıdogrula_everyone_${interaction.guild.id}${inte
           const embed = new EmbedBuilder()
           .setColor(0x2F3136)
           .setAuthor({ name: `${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL()} ` })
-          .setDescription("<:tik:1039607067729727519> **|** Giriş çıkış mesajı sıfırlandı!")
+          .setDescription("<a:tik:1318968486671945840> **|** Giriş çıkış mesajı sıfırlandı!")
           db.delete(`sayacmessageDate_${interaction.guild.id}`)
           db.delete(`sayacmessage_${interaction.guild.id}`)
 
