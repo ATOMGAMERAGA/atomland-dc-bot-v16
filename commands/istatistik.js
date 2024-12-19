@@ -6,7 +6,7 @@ const db = require("croxydb")
   const os = require("os");
 module.exports = {
   name: "istatistik",
-  description: "💙 Botun istatistiğini görürsün!",
+  description: " Botun istatistiğini görürsün!",
   type: 1,
   options: [],
 
@@ -42,18 +42,18 @@ var yes4 = servers > 400
 var yes45 = servers > 450
 var yes5 = servers > 500
 
-var basDolu = "<:basdolubar:1095981131385544704>"
-var basBos = "<:basbosbar:1095981689144090654>"
-var ortaDolu = "<:ortadolubar:1095981133738561586>"
-var ortaBos = "<:ortabosbar:1095981373422051348>"
-var sonDolu = "<:sondolubar:1054411035374788708>"
-var sonBos = "<:sonbosbar:1095981520998649867>"
+var basDolu = "<:basdolu:1319151258694586502>"
+var basBos = "<:basbos:1319151312457175101>"
+var ortaDolu = "<:ortadolu:1319151089739894886>"
+var ortaBos = "<:ortabos:1319151178898215027>"
+var sonDolu = "<:sondolu:1319151368145076336>"
+var sonBos = "<:sonbos:1319151426953416786>"
 
 	let members = client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()
     const embed = new EmbedBuilder()
     .setThumbnail(interaction.client.user.displayAvatarURL({ dynamic: true }))
     .addFields(
-      { name: '<:dev:1039607045613166652> Bot Sahibi', value: `**aras#0001**`, inline: true },
+      { name: '<:utility:1284009085531983894> Bot Sahibi', value: `**atomgameraga**`, inline: true },
       { name: "👥 Kullanıcılar", value: `${members}`, inline: true },
       { name: "🧩 Sunucular", value: `${servers}`, inline: true },
       { name: "📼 Bellek Kullanımı", value: `${(process.memoryUsage().heapUsed / 1024 / 512).toFixed(2)}MB`, inline: true },
