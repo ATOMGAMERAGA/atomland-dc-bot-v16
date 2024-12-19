@@ -29,7 +29,7 @@ name: Discord.Events.InteractionCreate,
 		console.log(`Komut kullandı: ${interaction.user.tag} (${interaction.user.id}) (${interaction.guild.name}) `)
 
         const btn = createButton(interaction, {
-          id: `${interaction.user.everyone}`, // Butonu kullanacak olan kişinin ID'si. //Eğer buraya id yerine "everyone" yazarsan herkes kullanabilir.
+          id: `${interaction.user.id}`, // Butonu kullanacak olan kişinin ID'si. //Eğer buraya id yerine "everyone" yazarsan herkes kullanabilir.
           id_name: `rulesClick`, // Butonun idsi.
           label: `Kabul Ediyorum.`, //Butonun ismi.
           emoji: "<a:tik:1318968486671945840>",
@@ -91,7 +91,7 @@ name: Discord.Events.InteractionCreate,
   .setCustomId("ooeoeo"))
       const embed = new EmbedBuilder()
       .setAuthor({ name: `Senin ile kuralları kabul eden kişi sayısı: ${rulesizd}`, iconURL: client.user.displayAvatarURL({ dynamic: true })})
-      .setTitle("<a:ZippyRiri_Utility:1284009110320320555>・Kuralları kabul ettiğin için teşekkürler artık botun tadını çıkarabilirsin!")
+      .setTitle("<a:ZippyRiri_Utility:1284009110320320555>・Kuralları kabul ettiğin için teşekkürler artık bu komutun tadını çıkarabilirsin!")
       .setColor('Blue')
       return interaction.update({ embeds: [embed], components: [row], ephemeral: true })
     }
@@ -150,13 +150,13 @@ name: Discord.Events.InteractionCreate,
       let ayrildiLog = db.get(`ayrildiLog_${interaction.guild.id}`)
       let adminRol = db.get(`adminRol_${interaction.guild.id}`)
 
-      if (!onay) interaction.reply({ content: "<:carpi:1040649840394260510> | Botlist sistemi ayarlanmamış!", ephemeral: true })
-      if (!logg) interaction.reply({ content: "<:carpi:1040649840394260510> | Botlist sistemi ayarlanmamış!", ephemeral: true })
-      if (!botRol) interaction.reply({ content: "<:carpi:1040649840394260510> | Botlist sistemi ayarlanmamış!", ephemeral: true })
-      if (!devRol) interaction.reply({ content: "<:carpi:1040649840394260510> | Botlist sistemi ayarlanmamış!", ephemeral: true })
-      if (!adminRol) interaction.reply({ content: "<:carpi:1040649840394260510> | Botlist sistemi ayarlanmamış!", ephemeral: true })
-      if (!botekle) interaction.reply({ content: "<:carpi:1040649840394260510> | Botlist sistemi ayarlanmamış!", ephemeral: true })
-      if (!ayrildiLog) interaction.reply({ content: "<:carpi:1040649840394260510> | Botlist sistemi ayarlanmamış!", ephemeral: true })
+      if (!onay) interaction.reply({ content: "<a:arp:1318968419940569159> | Botlist sistemi ayarlanmamış!", ephemeral: true })
+      if (!logg) interaction.reply({ content: "<a:arp:1318968419940569159> | Botlist sistemi ayarlanmamış!", ephemeral: true })
+      if (!botRol) interaction.reply({ content: "<a:arp:1318968419940569159> | Botlist sistemi ayarlanmamış!", ephemeral: true })
+      if (!devRol) interaction.reply({ content: "<a:arp:1318968419940569159> | Botlist sistemi ayarlanmamış!", ephemeral: true })
+      if (!adminRol) interaction.reply({ content: "<a:arp:1318968419940569159> | Botlist sistemi ayarlanmamış!", ephemeral: true })
+      if (!botekle) interaction.reply({ content: "<a:arp:1318968419940569159> | Botlist sistemi ayarlanmamış!", ephemeral: true })
+      if (!ayrildiLog) interaction.reply({ content: "<a:arp:1318968419940569159> | Botlist sistemi ayarlanmamış!", ephemeral: true })
 
       const Discord = require("discord.js")
       const id = interaction.fields.getTextInputValue("id")
@@ -184,7 +184,7 @@ name: Discord.Events.InteractionCreate,
       let link = "https://cdn.discordapp.com/avatars/" + id + "/" + avatar + ".png?size=1024"
 
       const gonderildi = new EmbedBuilder()
-          .setTitle("<:tik:1039607067729727519> | Başarılı!")
+          .setTitle("<a:tik:1318968486671945840> | Başarılı!")
           .setDescription("Bot başvurun başarıyla yetkililere gönderildi!")
           .setColor("Green")
       
@@ -234,7 +234,7 @@ name: Discord.Events.InteractionCreate,
       oda.permissionOverwrites.create(
         id, {ViewChannel: false}      
         )
-        interaction.reply("<:tik:1039607067729727519> | <@"+id+"> Adlı Kullanıcı Odadan Başarıyla Atıldı")
+        interaction.reply("<a:tik:1318968486671945840> | <@"+id+"> Adlı Kullanıcı Odadan Başarıyla Atıldı")
       } else {
     }
 
@@ -244,7 +244,7 @@ name: Discord.Events.InteractionCreate,
     oda.permissionOverwrites.create(
       id, {ViewChannel: true}      
       )
-      interaction.reply("<:tik:1039607067729727519> | <@"+id+"> Adlı Kullanıcı Odaya Eklendi")
+      interaction.reply("<a:tik:1318968486671945840> | <@"+id+"> Adlı Kullanıcı Odaya Eklendi")
     } else {
   }
     
@@ -336,7 +336,7 @@ name: Discord.Events.InteractionCreate,
      .setStyle(Discord.ButtonStyle.Secondary),
  );
  
-  interaction.reply({ content: `<:tik:1039607067729727519> **|** Senin için bir tane destek kanalı ${channel} oluşturldu.`, ephemeral: true })
+  interaction.reply({ content: `<a:tik:1318968486671945840> **|** Senin için bir tane destek kanalı ${channel} oluşturldu.`, ephemeral: true })
 
   db.set(`ticketChannelUser_${interaction.guild.id}${channel.id}`, { user: interaction.user.id })
   db.set(`ticketUser_${interaction.user.id}${interaction.guild.id}`, { whOpen: interaction.user.id, date: Date.now() })
@@ -366,7 +366,7 @@ if(interaction.customId === 'giriscikis'){
   
   if (sayacmessage && sayacmessageDate) {
       const date = new EmbedBuilder()
-      .setDescription(`<:carpi:1040649840394260510> | Bu sistem <t:${parseInt(sayacmessageDate.date / 1000)}:R> önce açılmış!`)
+      .setDescription(`<a:arp:1318968419940569159> | Bu sistem <t:${parseInt(sayacmessageDate.date / 1000)}:R> önce açılmış!`)
   
   return interaction.reply({ embeds: [date], ephemeral: true })
   }
@@ -390,7 +390,7 @@ if(interaction.customId === 'giriscikis'){
   const embed = new EmbedBuilder()
   .setColor(0x2F3136)
   .setAuthor({ name: `${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL()} ` })
-  .setDescription("<:tik:1039607067729727519> **|** Giriş çıkış mesajı aktif edildi!")
+  .setDescription("<a:tik:1318968486671945840> **|** Giriş çıkış mesajı aktif edildi!")
   .addFields([
     {
       name: "Karşılama mesajı:",
@@ -419,11 +419,11 @@ if(interaction.customId === 'giriscikis'){
     if(interaction.customId === "rol_everyone") {
         if(!interaction.member.roles.cache.has(butonrol)) { 
         interaction.member.roles.add(butonrol)
-      interaction.reply({content: "<:tik:1039607067729727519> | Rol Başarıyla Verildi!", ephemeral: true})
+      interaction.reply({content: "<a:tik:1318968486671945840> | Rol Başarıyla Verildi!", ephemeral: true})
        } else {
          
         interaction.member.roles.remove(butonrol)
-      interaction.reply({content: "<:carpi:1040649840394260510> | Rol Başarıyla Alındı!", ephemeral: true})
+      interaction.reply({content: "<a:tik:1318968486671945840> | Rol Başarıyla Alındı!", ephemeral: true})
     }
       }
 
@@ -485,7 +485,7 @@ if(interaction.customId === 'giriscikis'){
           const embed = new EmbedBuilder()
           .setTitle("> <:mod:1039607060775571476> | ATOMLAND - Moderasyon Menüsü!")
           .addFields(
-        { name: "**> <:slash:1041998751419605004> </ban-list:1039964202003079243>**", value: `> <:soru:1039607065045385256> **Banlı kullanıcıları gösterir!**`, inline: true },
+        { name: "**> <:slash:1041998751419605004> </ban-list:1039964202003079243>**", value: `> <:sparklescyan:1285169162985148493> **Banlı kullanıcıları gösterir!**`, inline: true },
         { name: "**> <:slash:1041998751419605004> </ban:1039964202003079244>**", value: `> <:soru:1039607065045385256> **Bir üyeyi yasaklarsın!**`, inline: true  },
         { name: "**> <:slash:1041998751419605004> </emojiler:1039964202003079250>**", value: `> <:soru:1039607065045385256> **Emojileri gösterir!**`, inline: true  },
         { name: "**> <:slash:1041998751419605004> </forceban:1039964202045030420>**", value: `> <:soru:1039607065045385256> **ID ile kullanıcı banlarsın!**`, inline: true  },
