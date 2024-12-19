@@ -2,7 +2,7 @@ const { Client, EmbedBuilder, PermissionsBitField } = require("discord.js");
 
 module.exports = {
   name: "kanal-açıklama",
-  description: "💙 Kanal Açıklamasını Değiştirsin!",
+  description: " Kanal Açıklamasını Değiştirsin!",
   type: 1,
   options: [
     {
@@ -22,11 +22,11 @@ module.exports = {
 ],
 
   run: async(client, interaction) => {
-    if(!interaction.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) return interaction.reply({content: "<:carpi:1040649840394260510> | Kanalları Yönet Yetkin Yok!", ephemeral: true})
+    if(!interaction.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) return interaction.reply({content: "<a:arp:1318968419940569159> | Kanalları Yönet Yetkin Yok!", ephemeral: true})
     const aciklama = interaction.options.getString('açıklama')
     const kanal2 = interaction.options.getChannel('kanal')
     client.channels.cache.get(kanal2.id).setTopic(aciklama)
-interaction.reply("<:tik:1039607067729727519> | <#"+kanal2+"> Kanalının Açıklaması Başarıyla **"+aciklama+"** Olarak Değiştirildi.")
+interaction.reply("<<a:tik:1318968486671945840> | <#"+kanal2+"> Kanalının Açıklaması Başarıyla **"+aciklama+"** Olarak Değiştirildi.")
 
   }
 
