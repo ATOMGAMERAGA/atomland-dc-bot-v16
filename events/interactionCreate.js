@@ -29,7 +29,7 @@ name: Discord.Events.InteractionCreate,
 		console.log(`Komut kullandı: ${interaction.user.tag} (${interaction.user.id}) (${interaction.guild.name}) `)
 
         const btn = createButton(interaction, {
-          id: `${interaction.user.id}`, // Butonu kullanacak olan kişinin ID'si. //Eğer buraya id yerine "everyone" yazarsan herkes kullanabilir.
+          id: `${interaction.user.everyone}`, // Butonu kullanacak olan kişinin ID'si. //Eğer buraya id yerine "everyone" yazarsan herkes kullanabilir.
           id_name: `rulesClick`, // Butonun idsi.
           label: `Kabul Ediyorum.`, //Butonun ismi.
           emoji: "<a:tik:1318968486671945840>",
