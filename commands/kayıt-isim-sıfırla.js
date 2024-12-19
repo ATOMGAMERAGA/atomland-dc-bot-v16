@@ -2,7 +2,7 @@ const db = require("croxydb");
 
 module.exports = {
   name: "kayıt-isim-sıfırla",
-  description: "💙 Kayıt ismini sıfırlarsın!",
+  description: " Kayıt ismini sıfırlarsın!",
   options: [],
   
   run: async(client, interaction) => {
@@ -13,9 +13,9 @@ module.exports = {
       db.delete(`kayıtlıuye_${interaction.user.id}`)
       interaction.member.setNickname(`${interaction.user.username}`)
 
-      return interaction.reply({ embeds: [{ description: "<:tik:1039607067729727519> | İsminiz başarıyla sıfırlandı." }] })
+      return interaction.reply({ embeds: [{ description: "<a:tik:1318968486671945840> | İsminiz başarıyla sıfırlandı." }] })
     } else {
-      return interaction.reply({ embeds: [{ description: "<:carpi:1040649840394260510> | İsminiz kayıt sisteminde kayıtlı değildir." }] })
+      return interaction.reply({ embeds: [{ description: "<a:arp:1318968419940569159> | İsminiz kayıt sisteminde kayıtlı değildir." }] })
     }
   }
 }
