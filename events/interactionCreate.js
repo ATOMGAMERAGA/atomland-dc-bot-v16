@@ -86,12 +86,12 @@ name: Discord.Events.InteractionCreate,
   new Discord.ButtonBuilder()
   .setLabel("Kabul Ediyorum.")
   .setStyle(Discord.ButtonStyle.Danger)
-  .setEmoji("<:tik:1039607067729727519>")
+  .setEmoji("<a:tik:1318968486671945840>")
   .setDisabled(true)
   .setCustomId("ooeoeo"))
       const embed = new EmbedBuilder()
       .setAuthor({ name: `Senin ile kuralları kabul eden kişi sayısı: ${rulesizd}`, iconURL: client.user.displayAvatarURL({ dynamic: true })})
-      .setTitle("> <:uyari:1040649846400499712>・Kuralları kabul ettiğin için teşekkürler artık botun tadını çıkarabilirsin!")
+      .setTitle("<a:ZippyRiri_Utility:1284009110320320555>・Kuralları kabul ettiğin için teşekkürler artık botun tadını çıkarabilirsin!")
       .setColor('Blue')
       return interaction.update({ embeds: [embed], components: [row], ephemeral: true })
     }
@@ -483,7 +483,7 @@ if(interaction.customId === 'giriscikis'){
         .setCustomId(".clearMessageButton_"+interaction.user.id)
       )
           const embed = new EmbedBuilder()
-          .setTitle("> <:mod:1039607060775571476> | Silex - Moderasyon Menüsü!")
+          .setTitle("> <:mod:1039607060775571476> | ATOMLAND - Moderasyon Menüsü!")
           .addFields(
         { name: "**> <:slash:1041998751419605004> </ban-list:1039964202003079243>**", value: `> <:soru:1039607065045385256> **Banlı kullanıcıları gösterir!**`, inline: true },
         { name: "**> <:slash:1041998751419605004> </ban:1039964202003079244>**", value: `> <:soru:1039607065045385256> **Bir üyeyi yasaklarsın!**`, inline: true  },
