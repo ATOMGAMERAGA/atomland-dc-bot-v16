@@ -86,7 +86,7 @@ module.exports =  {
           new Discord.ButtonBuilder()
           .setLabel("Kabul Ediyorum.")
           .setStyle(Discord.ButtonStyle.Danger)
-          .setEmoji("<a:arp:1318968419940569159>")
+          .setEmoji("<a:tik:1318968486671945840>")
           .setDisabled(true)
           .setCustomId("ooeoeo"))
         const embed = new EmbedBuilder()
