@@ -64,7 +64,7 @@ module.exports = {
 
         const basarili = new EmbedBuilder()
             .setColor("Green")
-            .setDescription(`<:tik:1039607067729727519> | __**Destek Sistemi**__ başarıyla ayarlandı!\n\n<a:ZippyRiri_Utility:1284009110320320555> Destek Kanalı: ${ticketkanal}\n<a:ZippyRiri_Utility:1284009110320320555> Log Kanalı: ${logkanal}\n<:Discord_Pixel_Emoji:1288881557087453194> Yetkili Rolü: ${rol}`)
+            .setDescription(`<a:tik:1318968486671945840> | __**Destek Sistemi**__ başarıyla ayarlandı!\n\n<a:ZippyRiri_Utility:1284009110320320555> Destek Kanalı: ${ticketkanal}\n<a:ZippyRiri_Utility:1284009110320320555> Log Kanalı: ${logkanal}\n<:Discord_Pixel_Emoji:1288881557087453194> Yetkili Rolü: ${rol}`)
             db.set(`ticketKanal_${interaction.guild.id}`, logkanal.id)
             db.set(`ticketSystem_${interaction.guild.id}`, { yetkili: rol.id, ticketchannel: ticketkanal.id })
             db.set(`ticketCategory_${interaction.guild.id}`, { category:  category.id, log: logkanal.id });
@@ -75,7 +75,7 @@ module.exports = {
             .setTitle("<a:AUtilityPoint:1284009114699038833> | Destek talebi nasıl açabilirim?")
             .setDescription("> Aşağıdaki **Destek Talebi Oluştur** butonuna basarak destek talebi oluşturabilirsin!")
 			.setThumbnail(interaction.guild.iconURL({ dynamic: true }))
-            .setFooter({ text: "Silex" })
+            .setFooter({ text: "ATOMLAND Destek" })
   
         const row11 = new Discord.ActionRowBuilder()
   
