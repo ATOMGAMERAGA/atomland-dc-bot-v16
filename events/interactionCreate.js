@@ -90,7 +90,7 @@ client.on('interactionCreate', async (interaction) => {
       return interaction.reply({
 
 
-    if (!interaction.customId === idFind("kayitol")) {
+    if (interaction.customId === idFind("kayitol")) {
       const kayitmodel = new ModalBuilder()
       .setCustomId('kayitform')  
       .setTitle('ATOMLAND - Kayıt Menüsü!')
