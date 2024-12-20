@@ -36,75 +36,59 @@ name: Discord.Events.InteractionCreate,
           style: ButtonStyle.Danger //Butonun stili.
         })
 
-const rulesisread = db.get(`rulesisread_${interaction.user.id}`); // Kullanıcının durumunu kontrol et
-const rulesizd = db.get(`rulesize`) || 0; // Kabul eden kişi sayısı
+const { 
+  EmbedBuilder, 
+  ActionRowBuilder, 
+  ButtonBuilder, 
+  ButtonStyle 
+} = require('discord.js');
 
-if (!rulesisread) {
-  const embed = new EmbedBuilder()
-    .setAuthor({
-      name: `Kuralları kabul eden kişi sayısı: ${rulesizd}`,
-      iconURL: client.user.displayAvatarURL({ dynamic: true }),
-    })
-    .setTitle("> <a:AUtilityPoint:1284009114699038833>・Kuralları kabul etmek için **Kabul Ediyorum.** butonuna tıklayın!\n> ・Ama bunu yapmadan önce bi linklere göz atmanı isterim!")
-    .setDescription(
-      "\n\n**<a:Minecraft_enchanted_book:1284008792882810880> Linkler**\n> ・**Botun kullanım koşulları: [Tıkla](https://github.com/ATOMGAMERAGA/atomland-terms-of-services)**\n・**Botun gizlilik politikası: [Tıkla](https://github.com/ATOMGAMERAGA/atomland-privacy-policy)**"
-    )
-    .setColor('Blue');
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isCommand() && !interaction.isButton()) return;
 
-  const btn = new ActionRowBuilder().addComponents(
-    new ButtonBuilder()
-      .setCustomId('accept_rules') // Buton ID'si
-      .setLabel('Kabul Ediyorum')
-      .setStyle(ButtonStyle.Success)
-  );
+  const rulesisread = db.get(`rulesisread_${interaction.user.id}`); // Kullanıcının durumunu kontrol et
+  const rulesizd = db.get(`rulesize`) || 0; // Kabul eden kişi sayısı
 
-  return interaction.reply({ embeds: [embed], components: [btn], ephemeral: true });
-}
+  if (!rulesisread) {
+    const embed = new EmbedBuilder()
+      .setAuthor({
+        name: `Kuralları kabul eden kişi sayısı: ${rulesizd}`,
+        iconURL: client.user.displayAvatarURL({ dynamic: true }),
+      })
+      .setTitle(
+        "> <a:AUtilityPoint:1284009114699038833>・Kuralları kabul etmek için **Kabul Ediyorum.** butonuna tıklayın!\n> ・Ama bunu yapmadan önce bi linklere göz atmanı isterim!"
+      )
+      .setDescription(
+        "\n\n**<a:Minecraft_enchanted_book:1284008792882810880> Linkler**\n> ・**Botun kullanım koşulları: [Tıkla](https://github.com/ATOMGAMERAGA/atomland-terms-of-services)**\n・**Botun gizlilik politikası: [Tıkla](https://github.com/ATOMGAMERAGA/atomland-privacy-policy)**"
+      )
+      .setColor('Blue');
 
-// Kullanıcı kuralları zaten kabul etmiş, komutu çalıştır
-return cmd.run(client, interaction, db, Rank, AddRank, RemoveRank);
+    const btn = new ActionRowBuilder().addComponents(
+      new ButtonBuilder()
+        .setCustomId('accept_rules') // Buton ID'si
+        .setLabel('Kabul Ediyorum')
+        .setStyle(ButtonStyle.Success)
+    );
 
-
-
+    return interaction.reply({ embeds: [embed], components: [btn], ephemeral: true });
   }
 
-  if(interaction.isButton()) {
-    const customId = interaction.customId;
-    const name = customId.split("_")[0];
-    const id = customId.split("_")[1];
+  // Kullanıcı kuralları kabul ettiyse komutu çalıştır
+  return cmd.run(client, interaction, db, Rank, AddRank, RemoveRank);
+});
 
-    const idFind = (id_name) => {
-      return `${id_name}_${id}`;
-    } 
+// Buton etkileşim işleyicisi
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isButton()) return;
 
-    if(id !== "everyone" && id !== interaction.user.id) {
-      const butonembed = new Discord.EmbedBuilder()
-      .setDescription(`Bu butonu sadece komutu yazan kişi kullanabilir!`)
-      return interaction.reply({ embeds: [butonembed], ephemeral: true })
-    }
+  if (interaction.customId === 'accept_rules') {
+    const userId = interaction.user.id;
 
-    if(interaction.customId === idFind(".clearMessageButton")) {
-      return interaction.message.delete();
-    }
+    // Kullanıcı durumu kontrolü
+    const alreadyAccepted = db.get(`rulesisread_${userId}`);
+    if (alreadyAccepted) {
+      return interaction.reply({
 
-    if(interaction.customId === idFind("rulesClick")) {
-      db.set(`rulesisread_${interaction.user.id}`, true)
-      db.add(`rulesize`, 1);      
-      const rulesizd = db.fetch(`rulesize`)
-      const row = new Discord.ActionRowBuilder()
-      .addComponents(
-  new Discord.ButtonBuilder()
-  .setLabel("Kabul Ediyorum.")
-  .setStyle(Discord.ButtonStyle.Danger)
-  .setEmoji("<a:tik:1318968486671945840>")
-  .setDisabled(true)
-  .setCustomId("ooeoeo"))
-      const embed = new EmbedBuilder()
-      .setAuthor({ name: `Senin ile kuralları kabul eden kişi sayısı: ${rulesizd}`, iconURL: client.user.displayAvatarURL({ dynamic: true })})
-      .setTitle("<a:ZippyRiri_Utility:1284009110320320555>・Kuralları kabul ettiğin için teşekkürler artık bu komutun tadını çıkarabilirsin!")
-      .setColor('Blue')
-      return interaction.update({ embeds: [embed], components: [row], ephemeral: true })
-    }
 
     if(interaction.customId === idFind("kayitol")) {
       const kayitmodel = new ModalBuilder()
