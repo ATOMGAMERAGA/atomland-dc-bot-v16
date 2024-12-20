@@ -21,7 +21,7 @@ module.exports = {
     } else {
     const data = collection.map(mr => "`"+mr.user.username+"`").slice(0, 60).join(", ")
     const embed2 = new EmbedBuilder()
-    .setTitle("Silex - Ban List")
+    .setTitle("ATOMLAND - Ban List")
     .setColor("#ff0000")
     .setDescription(data)
     interaction.reply({embeds: [embed2]})
