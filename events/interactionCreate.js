@@ -36,23 +36,33 @@ name: Discord.Events.InteractionCreate,
           style: ButtonStyle.Danger //Butonun stili.
         })
 
-        const rulesisread = db.fetch(`rulesisread_${interaction.user.id}`);
-        const rulesizd = db.fetch(`rulesize`)
-        if(!rulesisread) {
-          const embed = new EmbedBuilder()
-          .setAuthor({ name: `Kuralları kabul eden kişi sayısı: ${rulesizd}`, iconURL: client.user.displayAvatarURL({ dynamic: true })})
-          .setTitle("> <a:AUtilityPoint:1284009114699038833>・Kuralları kabul etmek için **Kabul Ediyorum.** butonuna tıklayın!\n> ・Ama bunu yapmadan önce bi linklere göz atmanı isterim!")
-          .setDescription("\n\n**<a:Minecraft_enchanted_book:1284008792882810880> Linkler**\n> ・**Botun kullanım koşulları: [Tıkla](https://github.com/ATOMGAMERAGA/atomland-terms-of-services)**\n>・**Botun gizlilik politikası: [Tıkla](https://github.com/ATOMGAMERAGA/atomland-terms-of-services)**")
-          .setColor('Blue')
-          return interaction.reply({ embeds: [embed], components: [btn], ephemeral: true })
-        }
+const rulesisread = db.get(`rulesisread_${interaction.user.id}`); // Kullanıcının durumunu kontrol et
+const rulesizd = db.get(`rulesize`) || 0; // Kabul eden kişi sayısı
 
-       return cmd.run(client, interaction, db, Rank, AddRank, RemoveRank);
+if (!rulesisread) {
+  const embed = new EmbedBuilder()
+    .setAuthor({
+      name: `Kuralları kabul eden kişi sayısı: ${rulesizd}`,
+      iconURL: client.user.displayAvatarURL({ dynamic: true }),
+    })
+    .setTitle("> <a:AUtilityPoint:1284009114699038833>・Kuralları kabul etmek için **Kabul Ediyorum.** butonuna tıklayın!\n> ・Ama bunu yapmadan önce bi linklere göz atmanı isterim!")
+    .setDescription(
+      "\n\n**<a:Minecraft_enchanted_book:1284008792882810880> Linkler**\n> ・**Botun kullanım koşulları: [Tıkla](https://github.com/ATOMGAMERAGA/atomland-terms-of-services)**\n・**Botun gizlilik politikası: [Tıkla](https://github.com/ATOMGAMERAGA/atomland-privacy-policy)**"
+    )
+    .setColor('Blue');
 
-      }
+  const btn = new ActionRowBuilder().addComponents(
+    new ButtonBuilder()
+      .setCustomId('accept_rules') // Buton ID'si
+      .setLabel('Kabul Ediyorum')
+      .setStyle(ButtonStyle.Success)
+  );
 
+  return interaction.reply({ embeds: [embed], components: [btn], ephemeral: true });
+}
 
-    });
+// Kullanıcı kuralları zaten kabul etmiş, komutu çalıştır
+return cmd.run(client, interaction, db, Rank, AddRank, RemoveRank);
 
 
 
