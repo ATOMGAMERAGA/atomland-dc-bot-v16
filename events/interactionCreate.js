@@ -52,7 +52,6 @@ name: Discord.Events.InteractionCreate,
           const kayityasrow3 = new ActionRowBuilder().addComponents(yas);
           kayitmodel.addComponents(kayitisimrow, kayityasrow3);
           
-          await interaction.showModal(kayitmodel);
     }
   }
 
