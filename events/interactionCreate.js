@@ -29,49 +29,6 @@ name: Discord.Events.InteractionCreate,
 		console.log(`Komut kullandı: ${interaction.user.tag} (${interaction.user.id}) (${interaction.guild.name}) `)
 
 
-    if(interaction.customId === idFind("kayitol")) {
-      const kayitmodel = new ModalBuilder()
-      .setCustomId('kayitform')  
-      .setTitle('ATOMLAND - Kayıt Menüsü!')
-        const isim = new TextInputBuilder()
-        .setCustomId('kayitisim')
-        .setLabel('isim')
-        .setStyle(TextInputStyle.Paragraph) 
-        .setMinLength(2)
-        .setPlaceholder('İsminiz Nedir?')
-        .setRequired(true)
-        const yas = new TextInputBuilder() 
-        .setCustomId('kayityas')
-        .setLabel('yaş')
-        .setStyle(TextInputStyle.Paragraph)  
-        .setMinLength(1)
-        .setPlaceholder('Yaşınız Kaçtır?')
-        .setRequired(true)
-        
-          const kayitisimrow = new ActionRowBuilder().addComponents(isim);
-          const kayityasrow3 = new ActionRowBuilder().addComponents(yas);
-          kayitmodel.addComponents(kayitisimrow, kayityasrow3);
-          
-    }
-  }
-
-  if(interaction.isModalSubmit()) {
-    if (interaction.customId === 'kayitform') {
-      
-         const kayitisims = interaction.fields.getTextInputValue("kayitisim")
-         const kayityass = interaction.fields.getTextInputValue('kayityas')
-         interaction.member.setNickname(`${kayitisims} | ${kayityass}`)
-         interaction.update({content: `${interaction.user} Adlı kullanıcı başarılı bir şekilde kayıt oldu!`, embeds: [], components: []})
-         const kayitsistemi = db.fetch(`kayıtsistemi_${interaction.guild.id}`)
-    
-         const kayıtlı = await interaction.guild.roles.cache.find( ch => ch.id === kayitsistemi.kayıtlırol );
-         const kayıtsız = await interaction.guild.roles.cache.find(rl => rl.id === kayitsistemi.kayıtsızrol);
-
-         interaction.guild.members.cache.get(interaction.member.id).roles.remove(kayıtsız.id)
-         interaction.guild.members.cache.get(interaction.member.id).roles.add(kayıtlı.id)
-		 db.set(`kayıtlıuye_${interaction.member.id}`, { isim: kayitisims, yas: kayityass })
-     }
-
      if (interaction.customId === 'form') {
               
       let onay = db.get(`onay_${interaction.guild.id}`)
