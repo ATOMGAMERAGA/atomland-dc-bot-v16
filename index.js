@@ -15,7 +15,7 @@ const client = new Discord.Client({
   retryLimit: 3,
 });
 
-client.onready', () => {
+client.on('ready', () => {
   client.channels.cache.get('1281676453301194772').join();
 })
 
