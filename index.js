@@ -60,10 +60,11 @@ client.on('messageCreate', async message => {
 client.login(process.env.BOT_TOKEN);
 
 // --- HTTP Sunucusu Başlatma ---
-// Gelen isteklere "Bot is running!" mesajı döndüren basit bir HTTP sunucusu
+// Render.com ortamında kullanılan PORT ortam değişkenini kullanıyoruz.
+const PORT = process.env.PORT || 443;
 http.createServer((req, res) => {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end("Bot is running!");
-}).listen(443, () => {
-  console.log("HTTP sunucusu 443 portunda çalışıyor.");
+}).listen(PORT, '0.0.0.0', () => {
+  console.log(`HTTP sunucusu ${PORT} portunda çalışıyor.`);
 });
