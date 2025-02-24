@@ -1,94 +1,69 @@
-const Discord = require("discord.js");
-const { EmbedBuilder } = require("discord.js");
-const fs = require("fs");
-const db = require("croxydb");
-const config = require("./config.json");
-const Rest = require("@discordjs/rest");
-const DiscordApi = require("discord-api-types/v10");
+require('dotenv').config();
+const http = require('http');
+const { Client, GatewayIntentBits } = require('discord.js');
+const { joinVoiceChannel, getVoiceConnection } = require('@discordjs/voice');
 
-const client = new Discord.Client({
-  intents: 3276543,
-  partials: Object.values(Discord.Partials),
-  allowedMentions: {
-    parse: ["users", "roles", "everyone"],
-  },
-  retryLimit: 3,
+// Sadece bu kullanıcı ID'sine sahip kişi komutları kullanabilsin
+const ALLOWED_USER_ID = "1051072781284016198";
+
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildVoiceStates
+  ]
 });
 
-client.on('ready', () => {
-  client.channels.cache.get('1281676453301194772').join();
-})
-
-global.client = client;
-client.commands = (global.commands = []);
-
-/*                         KEEPALIVE (REPLIT)                              */
-
-// Express modülü ile bir HTTP sunucusu ekliyoruz
-const express = require("express");
-const app = express();
-
-app.get("/", (req, res) => {
-  res.send("Bot is alive!");
+client.once('ready', () => {
+  console.log(`Bot ${client.user.tag} olarak giriş yaptı!`);
 });
 
-app.listen(8000, () => {
-  console.log("[+] KeepAlive sunucusu çalışıyor.");
-});
+client.on('messageCreate', async message => {
+  // Sadece izin verilen kullanıcı komutları çalıştırabilsin
+  if (message.author.id !== ALLOWED_USER_ID) return;
 
-/*                         SLASH COMMANDS                               */
-
-console.log(`[-] ${fs.readdirSync("./commands").length} komut algılandı.`);
-
-for (let commandName of fs.readdirSync("./commands")) {
-  if (!commandName.endsWith(".js")) return;
-
-  const command = require(`./commands/${commandName}`);
-  client.commands.push({
-    name: command.name.toLowerCase(),
-    description: command.description.toLowerCase(),
-    options: command.options,
-    dm_permission: false,
-    type: 1,
-  });
-
-  console.log(`[+] ${commandName} komutu başarıyla yüklendi.`);
-}
-
-/*                         EVENTS                                    */
-
-console.log(`[-] ${fs.readdirSync("./events").length} olay algılandı.`);
-
-for (let eventName of fs.readdirSync("./events")) {
-  if (!eventName.endsWith(".js")) return;
-
-  const event = require(`./events/${eventName}`);
-  const evenet_name = eventName.split(".")[0];
-
-  client.on(event.name, (...args) => {
-    event.run(client, ...args);
-  });
-
-  console.log(`[+] ${eventName} olayı başarıyla yüklendi.`);
-}
-
-/*                     LOADING SLASH COMMANDS                     */
-
-client.once("ready", async () => {
-  const rest = new Rest.REST({ version: "10" }).setToken(process.env.token);
-  try {
-    await rest.put(DiscordApi.Routes.applicationCommands(client.user.id), {
-      body: client.commands,
+  if (message.content === '!ses') {
+    const voiceChannel = message.member.voice.channel;
+    if (!voiceChannel) {
+      return message.reply('Lütfen önce bir ses kanalına katılınız!');
+    }
+    
+    // Botu ses kanalına, afk kalacak şekilde (selfMute & selfDeaf) katma
+    joinVoiceChannel({
+      channelId: voiceChannel.id,
+      guildId: message.guild.id,
+      adapterCreator: message.guild.voiceAdapterCreator,
+      selfMute: true,
+      selfDeaf: true
     });
-    console.log(`[+] Slash komutları başarıyla yüklendi.`);
-  } catch (error) {
-    console.error("[x] Slash komutlarını yüklerken bir hata oluştu:", error);
+    
+    message.channel.send('Bot ses kanalına katıldı ve afk konumda bekliyor.');
+  } else if (message.content === '!bb') {
+    // Ses kanalındaki bot bağlantısını kapatma
+    const connection = getVoiceConnection(message.guild.id);
+    if (connection) {
+      connection.destroy();
+      message.channel.send('Bot ses kanalından ayrıldı.');
+    } else {
+      message.channel.send("Bot şu anda herhangi bir ses kanalında değil.");
+    }
+  } else if (message.content === '!ip') {
+    // Sadece gülücük gönderme
+    message.channel.send(':)');
+  } else if (message.content === '!ping') {
+    // !ping komutu: Ping değerini yanıt olarak gönderir.
+    message.channel.send(`Ping: ${client.ws.ping}ms`);
   }
 });
 
-client.login(process.env.token).then(() => {
-  console.log(`[-] Discord API'ye istek gönderiliyor.`);
-  eval("console.clear()");
-}).catch(() => {
-  console.log(`[x] Discord API'ye istek gönderimi başarısız.`);
+client.login(process.env.BOT_TOKEN);
+
+// --- HTTP Sunucusu Başlatma ---
+// Gelen isteklere "Bot is running!" mesajı döndüren basit bir HTTP sunucusu
+http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end("Bot is running!");
+}).listen(443, () => {
+  console.log("HTTP sunucusu 443 portunda çalışıyor.");
 });
