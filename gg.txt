@@ -13,6 +13,12 @@
 ||*.metodbox.com^
 ||staticlcms.metodbox.com^
 
+! Loglardan tespit edilen aktif domainler
+||visionapi.metodbox.com^
+||al-api.metodbox.com^
+||kur-gate-api.metodbox.com^
+||mb2-kur-socket.metodbox.com^
+
 ! Additional potential subdomains (common patterns)
 ||api.ugurdijital.com^
 ||cdn.ugurdijital.com^
@@ -30,6 +36,9 @@
 ||admin.metodbox.com^
 ||panel.metodbox.com^
 ||cms.metodbox.com^
+||socket.metodbox.com^
+||gate.metodbox.com^
+||vision.metodbox.com^
 
 ! SeeMeet integration (mentioned in Metodbox)
 ||seemeet.com^
