@@ -1,4 +1,42 @@
-https://ugurdijital.com
-ugurdijital.com
-staticlcms.metodbox.com
-metodbox.com
+! Title: Uğur Dijital & Metodbox Domain Blocker
+! Description: Blocks all domains and subdomains related to Uğur Dijital and Metodbox
+! Version: 1.0
+! Homepage: Custom filter for blocking educational platforms
+! Last modified: 2025-09-02
+
+! Uğur Dijital domains
+||ugurdijital.com^
+||*.ugurdijital.com^
+
+! Metodbox domains  
+||metodbox.com^
+||*.metodbox.com^
+||staticlcms.metodbox.com^
+
+! Additional potential subdomains (common patterns)
+||api.ugurdijital.com^
+||cdn.ugurdijital.com^
+||static.ugurdijital.com^
+||app.ugurdijital.com^
+||mobile.ugurdijital.com^
+||admin.ugurdijital.com^
+||panel.ugurdijital.com^
+
+||api.metodbox.com^
+||cdn.metodbox.com^
+||static.metodbox.com^
+||app.metodbox.com^
+||mobile.metodbox.com^
+||admin.metodbox.com^
+||panel.metodbox.com^
+||cms.metodbox.com^
+
+! SeeMeet integration (mentioned in Metodbox)
+||seemeet.com^
+||*.seemeet.com^
+
+! Block any HTTPS/HTTP variations
+||http://ugurdijital.com^
+||https://ugurdijital.com^
+||http://metodbox.com^
+||https://metodbox.com^
